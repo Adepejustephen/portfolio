@@ -39,19 +39,19 @@ const About = () => {
         <AboutTextContainer>
           <AboutTitle>About Me</AboutTitle>
           <AboutText>
-            I’m Oluwakemi Adeleke, a professional and talented Product Designer
-            with front end development skills. I am passionate about leveraging
-            my diverse backgrounds to decipher challenging problems and create
-            delightful experiences. I honed my skills at web development,
-            technical writing, product design and SEO analytics. I develop
-            websites with HTML, CSS and JavaScript. I have top skills in using
-            design softwares like Figma, Adobe XD, Invision and PhotoShop; with
-            prototype tools like Framer and Protopie. Being a diligent,
-            hardworking and result oriented lady, I always work towards
-            achieving best result on each project I lay my hands on.
+            I'm a detail and result oriented Frontend developer who is skilled
+            in making Web App accessible to all people. I'm a team player who is
+            open-minded to new technologies and ideas. I enjoy being challenged
+            and engaged with projects that requires me to work outside my
+            comfort and skill set, as continuing to learn new languages and
+            development techniques are important to me. I build Web pages with
+            HTML5, CSS3, JAVASCRIPT and SASS. I'm currently learning React js. I
+            am enthusiastic about joining an organization that builds products
+            that is aimed at solving the world's problem as well a friendly
+            working environment.
           </AboutText>
 
-          <AboutTextLink to={'/works'}>
+          <AboutTextLink to={"/works"}>
             <AboutTextLinkText>Selected Projects</AboutTextLinkText>
           </AboutTextLink>
         </AboutTextContainer>
