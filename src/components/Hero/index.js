@@ -33,18 +33,20 @@ const Hero = () => {
         <HeroTopTextContainer>
           <HeroTopText
             initial={{
-              x: '-100%',
+              x: "-100%",
               opacity: 0,
             }}
             animate={{
               x: 0,
               opacity: 1,
+
               // color: '#fff',
             }}
             transition={{
               duration: 2,
               times: [0, 0.2, 1],
-              delay: 3.5,
+              delay: 1,
+        
             }}
           >
             <HeroText>F</HeroText>
@@ -58,16 +60,16 @@ const Hero = () => {
           </HeroTopText>
           <HeroTopText
             initial={{
-              height: '0%',
+              height: "0%",
               opacity: 0,
             }}
             animate={{
-              height: '100%',
+              height: "100%",
               opacity: 1,
             }}
             transition={{
               duration: 1,
-              delay: 5,
+              delay: 3,
               ease: "easeInOut",
             }}
             // onTransitionEnd={{
@@ -97,9 +99,8 @@ const Hero = () => {
           }}
           transition={{
             duration: 1,
-            delay: 5.2,
+            delay: 3.2,
           }}
-          
         >
           <HeroText>D</HeroText>
           <HeroText>E</HeroText>

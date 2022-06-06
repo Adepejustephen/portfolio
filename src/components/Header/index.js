@@ -12,8 +12,8 @@ const Header = () => {
         y: 0,
       }}
       transition={{
-        duration: 1.5,
-        delay: 1,
+        duration: .7,
+        ease: "easeInOut",
       }}
     >
       <HeaderContainer>
@@ -32,9 +32,12 @@ const Header = () => {
               <NavLink to={"/"}>Resume</NavLink>
             </NavListItem>
             <NavListItem>
-              <a href='mailto:adepejuifeoluwa97@gmail.com'
-              // ={"mailto:adepejuifeoluwa97@gmail.com"}
-              >Contact Me</a>
+              <a
+                href="mailto:adepejuifeoluwa97@gmail.com"
+                // ={"mailto:adepejuifeoluwa97@gmail.com"}
+              >
+                Contact Me
+              </a>
             </NavListItem>
           </NavList>
         </NavMenu>

@@ -12,8 +12,8 @@ const Footer = () => {
         y: 0,
       }}
       transition={{
-        duration: 1.5,
-        delay: 1,
+        duration: 0.7,
+        ease: "easeInOut",
       }}
     >
       <Footerleft>
@@ -34,7 +34,7 @@ const Footer = () => {
         </FooterLeftItem>
       </Footerleft>
       <Right>
-        Ifeoluwa Adepeju - Copyright <span></span>
+        Ifeoluwa Adepeju  &#169; <span></span>
         {year}
       </Right>
     </FooterContainer>
