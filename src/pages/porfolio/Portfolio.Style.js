@@ -89,7 +89,7 @@ display: flex;
 export const Btn = styled(motion.button)`
   background-color: ${(props) => props.theme.logo};
   /* border-color: ${(props) => props.theme.logo}; */
-  border-radius: 3px;
+  border-radius: 2px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -103,14 +103,14 @@ export const Btn = styled(motion.button)`
   transition: 0.3s;
 
   &:hover {
-    background: ${(props) => `rgba(${props.theme.textRgba}, .7)`};
+    background-color: rgba(255, 179, 87, .7);
     transition: 0.3s;
   }
 
-  &:last-child {
+  &:first-child {
     background: ${(props) => `rgba(${props.theme.textRgba}, .7)`};
-   &:hover {
-      background-color: ${(props) => props.theme.logo};
+    &:hover {
+      background-color: ${(props) => `rgba(${props.theme.textRgba}, .8)`};
       transition: 0.3s;
     }
   }
