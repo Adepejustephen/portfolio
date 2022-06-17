@@ -35,8 +35,13 @@ export const ImageContainer = styled(motion.div)`
 
   @media screen and (max-width: 800px) {
     width: 100%;
-    height: 400px;
     margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 400px;
+   
   }
 `;
 export const Image = styled(motion.img)`
