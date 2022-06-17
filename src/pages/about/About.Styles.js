@@ -13,11 +13,16 @@ min-height: 100vh;
 height: 100%;
 `
 export const AboutContainer = styled(motion.div)`
-/* height: 90vh; */
+  /* height: 90vh; */
   display: flex;
   justify-content: center;
   /* align-items: center; */
   margin-bottom: 50px;
+
+  @media screen and (max-width: 800px) {
+   flex-direction: column;
+   /* align-items: center; */
+  }
 `;
 export const AboutLeft = styled(motion.div)`
 /* flex:1; */
@@ -29,6 +34,22 @@ export const AboutImageContainer = styled(motion.div)`
   position: relative;
   border-radius: 5px;
 
+  @media screen and (max-width: 800px) {
+    max-width: 100%;
+    margin-bottom: 30px;
+    height: 600px;
+  }
+  @media screen and (max-width: 600px) {
+    /* max-width: 100%;
+    margin-bottom: 30px; */
+    height: 400px;
+  }
+
+  @media screen and (max-width: 800px) {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -39,6 +60,13 @@ export const AboutImageContainer = styled(motion.div)`
     border-left: 4px solid ${(props) => props.theme.logo};
     border-top: 4px solid ${(props) => props.theme.logo};
     border-radius: 5px;
+
+    @media screen and (max-width: 360px) {
+      border-left: 2px solid ${(props) => props.theme.logo};
+      border-top: 2px solid ${(props) => props.theme.logo};
+      left: -8px;
+      top: -8px;
+    }
   }
 `;
 export const AboutImage = styled(motion.img)`
@@ -52,6 +80,13 @@ export const AboutTextContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    margin-left:0;
+    margin-top: 30px;
+    /* align-items: center; */
+  }
 `;
 export const AboutTitle = styled(motion.h4)`
   font-family: "Monument Extended", sans-serif;
@@ -67,19 +102,24 @@ export const AboutTitle = styled(motion.h4)`
     position: absolute;
     bottom: -10px;
     left: 0;
+
+    
   }
 `;
 export const AboutText = styled(motion.p)`
-align-self: flex-end;
+  align-self: flex-end;
 
-`
+  @media screen and (max-width: 800px) {
+    margin-bottom: 30px;
+  }
+`;
 export const AboutTextLink = styled(Link)`
 
 `
 export const AboutTextLinkText = styled(motion.span)`
   /* align-self: flex-end; */
   border-bottom: 2px solid ${(props) => props.theme.logo};
-  font-size: 1.25rem;
+  font-size: 1.rem;
   padding-bottom: 3px;
   justify-self: flex-end;
   transition: 0.3s ease;
@@ -90,6 +130,8 @@ export const AboutTextLinkText = styled(motion.span)`
     transition: 0.3s ease;
     border-bottom: 2px solid ${(props) => props.theme.logo};
   }
+
+  
 `;
 
 
@@ -100,14 +142,19 @@ flex-direction: column;
 align-items: center;
 margin-bottom: 80px;
 
+
+
 `;
 
 export const SkllsList = styled(motion.ul)`
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-`
+  @media screen and (max-width: 800px) {
+   flex-wrap: wrap;
+  }
+`;
 export const SkllsListItem = styled(motion.li)`
   padding-right: 20px;
 `;

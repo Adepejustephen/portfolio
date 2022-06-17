@@ -29,6 +29,10 @@ export const FooterLeftItem = styled.li`
     transform: scale(1.1);
     transition: 0.3s ease;
   }
+
+   @media screen and (max-width: 600px) {
+   display: none;
+  }
 `;
 export const FooterLink = styled.a`
   

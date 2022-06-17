@@ -60,7 +60,7 @@ const About = () => {
               </AboutText>
 
               <AboutTextLink to={"/works"}>
-                <AboutTextLinkText>Selected Projects</AboutTextLinkText>
+                <AboutTextLinkText>See my selected Projects</AboutTextLinkText>
               </AboutTextLink>
             </AboutTextContainer>
           </AboutContainer>

@@ -1,8 +1,8 @@
 import React from 'react'
 import { data } from './data'
-import { Container, Icon, IconContainer, Image, ImageContainer, PortfolioContents, ProjectContainer, Text, TextContainer, TextTitle } from './Portfolio.Style'
+import { Btn, BtnLink, Buttons, Container, IconContainer, Image, ImageContainer, PortfolioContents, ProjectContainer, Text, TextContainer, TextTitle } from './Portfolio.Style'
 import {Footer, Header} from '../../components'
-import { UilEyeSlash } from "@iconscout/react-unicons";
+import { UilEyeSlash, UilArrowUpRight } from "@iconscout/react-unicons";
 import Main from '../../styles/MainAnimate';
 
 const Portfolio = () => {
@@ -21,12 +21,24 @@ const Portfolio = () => {
                   <TextContainer>
                     <TextTitle> {item.tile}</TextTitle>
                     <Text>{item.desc}</Text>
-                    <IconContainer>
-                      <Icon>
-                        Preview
-                        <UilEyeSlash />
-                      </Icon>
-                    </IconContainer>
+                    <Buttons>
+                      <Btn>
+                        <BtnLink href={item.live}>
+                          Preview
+                          <IconContainer>
+                            <UilEyeSlash />
+                          </IconContainer>
+                        </BtnLink>
+                      </Btn>
+                      <Btn>
+                        <BtnLink href={item.git}>
+                          GitHub
+                          <IconContainer>
+                            <UilArrowUpRight />
+                          </IconContainer>
+                        </BtnLink>
+                      </Btn>
+                    </Buttons>
                   </TextContainer>
                 </ProjectContainer>
               );
