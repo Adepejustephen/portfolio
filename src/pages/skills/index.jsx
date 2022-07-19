@@ -13,41 +13,45 @@ const SkillsSection = () => {
   return (
     <Container>
       <Skills>
-            {/* <AboutTitle style={{ textAlign: "center" }}>Skills</AboutTitle> */}
-            <SkllsList>
-              <SkllsListItem>
-                <SkllsImage src={NextJs} alt="nextjs" />
-              </SkllsListItem>
-              <SkllsListItem>
-                <SkllsImage src={React} alt="react" style={{ color: "#fff" }} />
-              </SkllsListItem>
-              <SkllsListItem>
-                <SkllsImage
-                  src={Javascript}
-                  alt="js"
-                  style={{ color: "#fff" }}
-                />
-              </SkllsListItem>
-              <SkllsListItem>
-                <SkllsImage src={Git} alt="git" style={{ color: "#fff" }} />
-              </SkllsListItem>
-              <SkllsListItem>
-                <SkllsImage
-                  src={StyledComponents}
-                  alt="styled-components"
-                  style={{ color: "#fff" }}
-                />
-              </SkllsListItem>
-              <SkllsListItem>
-                <SkllsImage src={Sass} alt="sass" style={{ color: "#fff" }} />
-              </SkllsListItem>
-              <SkllsListItem>
-                <SkllsImage src={Css} alt="css3" style={{ color: "#fff" }} />
-              </SkllsListItem>
-              <SkllsListItem>
-                <SkllsImage src={Html} alt="Html5" style={{ color: "#fff" }} />
-              </SkllsListItem>
-              {/* <SkllsListItem>
+        {/* <AboutTitle style={{ textAlign: "center" }}>Skills</AboutTitle> */}
+        <SkllsList>
+          <SkllsListItem>
+            <SkllsImage src={NextJs} alt="nextjs" />
+            <p>NextJs</p>
+          </SkllsListItem>
+          <SkllsListItem>
+            <SkllsImage src={React} alt="react" style={{ color: "#fff" }} />
+            <p>ReactJs</p>
+          </SkllsListItem>
+          <SkllsListItem>
+            <SkllsImage src={Javascript} alt="js" style={{ color: "#fff" }} />
+            <p>Javascript</p>
+          </SkllsListItem>
+          <SkllsListItem>
+            <SkllsImage src={Git} alt="git" style={{ color: "#fff" }} />
+            <p>Git</p>
+          </SkllsListItem>
+          <SkllsListItem>
+            <SkllsImage
+              src={StyledComponents}
+              alt="styled-components"
+              style={{ color: "#fff" }}
+            />
+            <p>Styled-Components</p>
+          </SkllsListItem>
+          <SkllsListItem>
+            <SkllsImage src={Sass} alt="sass" style={{ color: "#fff" }} />
+            <p>Sass</p>
+          </SkllsListItem>
+          <SkllsListItem>
+            <SkllsImage src={Css} alt="css3" style={{ color: "#fff" }} />
+            <p>Css</p>
+          </SkllsListItem>
+          <SkllsListItem>
+            <SkllsImage src={Html} alt="Html5" style={{ color: "#fff" }} />
+            <p>Html</p>
+          </SkllsListItem>
+          {/* <SkllsListItem>
                 <SkllsImage
                   src={Framer}
                   alt="framer"
@@ -61,8 +65,8 @@ const SkillsSection = () => {
                   style={{ color: "#fff" }}
                 />
               </SkllsListItem> */}
-            </SkllsList>
-          </Skills>
+        </SkllsList>
+      </Skills>
     </Container>
   );
 }

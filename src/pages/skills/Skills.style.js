@@ -28,7 +28,14 @@ export const SkllsList = styled(motion.ul)`
   }
 `;
 export const SkllsListItem = styled(motion.li)`
+text-align: center;
   padding-right: 20px;
+
+  p{
+font-size: 2rem;
+font-weight: 500;
+margin-top: 2rem;
+  }
 `;
 export const SkllsImage = styled(motion.img)`
   line-height: 80px;
