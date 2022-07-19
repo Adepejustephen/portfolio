@@ -84,11 +84,12 @@ export const AboutTextContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 3rem;
 
   @media screen and (max-width: 800px) {
     width: 100%;
     margin-left:0;
-    margin-top: 30px;
+    margin-top: 3rem;
     /* align-items: center; */
   }
 `;
