@@ -6,6 +6,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 min-height: 60vh;
+padding-top: 4rem;
 `
 
 export const Skills = styled(motion.section)`
