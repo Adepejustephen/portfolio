@@ -7,8 +7,8 @@ export const Container = styled(motion.section)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
-  /* padding-top: 40px; */
+ 
+  padding-top: 40px;
   min-height: 100vh;
   height: 100%;
   background-color: #2f62b5;
