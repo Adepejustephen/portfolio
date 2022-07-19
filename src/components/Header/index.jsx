@@ -19,7 +19,6 @@ const Header = () => {
   return (
     <Container
       fix={fix}
-
       initial={{
         y: "-100vh",
       }}
@@ -32,7 +31,14 @@ const Header = () => {
       }}
     >
       <HeaderContainer>
-        <Logo to={"/"}>
+        <Logo
+          activeClass="active"
+          to="hero"
+          spy={true}
+          smooth={true}
+          offset={false}
+          duration={500}
+        >
           <LogoText>Ifeoluwa</LogoText>
         </Logo>
         <NavMenu>

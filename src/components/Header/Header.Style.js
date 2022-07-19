@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import { NavLink } from "react-router-dom";
+
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -27,7 +27,7 @@ export const HeaderContainer = styled(motion.div)`
   align-items: center;
 `;
 
-export const Logo = styled(NavLink)`
+export const Logo = styled(Link)`
   display: flex;
   align-items: center;
 `;

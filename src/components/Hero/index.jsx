@@ -3,7 +3,7 @@ import Image from '../../assests/svg/Thur.svg'
 
 const Hero = () => {
   return (
-    <HeroContainer>
+    <HeroContainer name="hero">
       <HeroTextContainer>
         <TopText>Hi!</TopText>
         <NameBold>I'm Ifeoluwa.</NameBold>
