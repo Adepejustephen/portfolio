@@ -64,12 +64,17 @@ bottom: -8rem;
 right: 0;
 height: 60%;
 width: 35%;
+display: none;
 
 &:hover{
   transform: translate(-50px);
   transition: .5s ease ;
 }
 
+
+@media screen  and (min-width: 900px){
+ display: flex;
+}
 /* transform: rotate(90deg); */
 
 img{
