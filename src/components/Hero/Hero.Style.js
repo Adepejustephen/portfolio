@@ -17,8 +17,7 @@ export const HeroTextContainer = styled.div`
 width: 100%;
   display: flex;
   flex-direction: column;
- 
-  justify-content: center;
+  /* justify-content: center; */
 `;
 
 export const TopText = styled(motion.h1)`

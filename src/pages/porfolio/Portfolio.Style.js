@@ -32,7 +32,7 @@ justify-content: center; */
 /* margin-bottom: 20px; */
 `
 export const ImageContainer = styled(motion.div)`
-  height: 500px;
+  height: 400px;
   width: 600px;
 
   @media screen and (max-width: 800px) {
