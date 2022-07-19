@@ -17,7 +17,8 @@ const Main = ({ children, ...restprops }) => {
           opacity: 0,
         }}
         animate={{
-          background: "#0A192F",
+          // background: "#0A192F",
+          background: "#F5F5F5",
           opacity: 1,
         }}
         transition={{

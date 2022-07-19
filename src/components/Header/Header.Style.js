@@ -1,9 +1,20 @@
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Container = styled(motion.nav)`
-  padding: 30px 0;
+  /* padding: 30px 0; */
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: ${(props) => (props.fix ? "#fff" : "")};
+  position: ${(props) => (props.fix ? "fixed" : "relative")};
+  transition: ${(props) =>
+    props.fix ? " all 0.5s ease-in-out" : "0.5s ease-in-out"};
+  z-index: 10;
+  left: 0;
+  right: 0;
   /* position: relative; */
 `;
 
@@ -16,25 +27,15 @@ export const HeaderContainer = styled(motion.div)`
 `;
 
 export const Logo = styled(NavLink)`
-  /* color: ; */
+  display: flex;
+  align-items: center;
 `;
 export const LogoText = styled(motion.span)`
-  font-family: "Monument Extended", sans-serif;
-  font-size: ${(props) => props.theme.fontxl};
-  color: ${(props) => `rgba(${props.theme.textRgba}, .7)`};
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #2f62b5;
   position: relative;
-
-  /* &::before {
-    content: "";
-    width: 100%;
-    height: 10px;
-    background-color: ${(props) => props.theme.logo};
-    mix-blend-mode: darken;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: -2;
-  } */
 `;
 export const NavMenu = styled(motion.div)`
   border: none;
@@ -68,6 +69,8 @@ export const NavList = styled(motion.ul)`
 export const NavListItem = styled(motion.li)`
   margin: 0 20px;
   transition: 0.3s ease;
+  font-size: 2rem;
+  font-weight: 500;
 
   &:hover {
     color: ${(props) => props.theme.logo};
@@ -82,8 +85,16 @@ export const NavListItem = styled(motion.li)`
     margin: 20px 20px;
   }
 `;
-export const ItemLink = styled(NavLink)``;
-export const MailLink = styled(Link)``;
+export const ItemLink = styled(Link)`
+  font-size: 2rem;
+
+  &.active {
+    color: #2f62b5;
+  }
+`;
+export const MailLink = styled(Link)`
+  font-size: 2rem;
+`;
 
 // export const Button = styled(motion.button)`
 //   line-height: 30px;

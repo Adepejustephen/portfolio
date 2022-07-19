@@ -3,19 +3,20 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components'
 
 export const FooterContainer = styled(motion.footer)`
-width: 90%;
-margin: auto;
-/* padding-bottom: 20px ; */
-position: absolute;
-bottom: 20px;
-left: 0;
-right: 0;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 20px;
+  background-color: #547a87;
+  height: 40vh;
+  /* position: absolute; */
+  /* bottom: 20px; */
+  /* left: 0; */
+  /* right: 0; */
 
-display: flex;
-justify-content: space-between;
-align-items: center;
-
-`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 export const Footerleft = styled.ul`
 display:flex;

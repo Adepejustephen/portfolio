@@ -3,23 +3,25 @@ import styled from "styled-components";
 
 
 export const Container = styled(motion.section)`
-width: 90%;
-margin: auto;
-/* min-height: 100vh; */
-height: 100%;
-
-`
+ 
+  min-height: 100vh;
+  height: 100%;
+  padding-top: 8rem;
+  background-color: #547a87;
+`;
 
 export const ProjectContainer = styled(motion.div)`
-height: 100%;
-display: flex;
-justify-content: center;
-margin-bottom: 50px;
+  height: 100%;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  /* justify-content: center; */
+  margin-bottom: 50px;
 
-@media screen and (max-width: 800px){
+  @media screen and (max-width: 800px) {
     flex-direction: column;
-}
-`
+  }
+`;
 export const PortfolioContents = styled(motion.div)`
 display: flex;
 flex-direction: column;

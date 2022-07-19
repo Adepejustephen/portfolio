@@ -1,20 +1,20 @@
 import React from 'react'
 import { data } from './data'
 import { Btn, BtnLink, Buttons, Container, IconContainer, Image, ImageContainer, PortfolioContents, ProjectContainer, Text, TextContainer, TextTitle } from './Portfolio.Style'
-import {Footer, Header} from '../../components'
+// import {Footer, Header} from '../../components'
 import { UilEyeSlash, UilArrowUpRight } from "@iconscout/react-unicons";
-import Main from '../../styles/MainAnimate';
+// import Main from '../../styles/MainAnimate';
 
 const Portfolio = () => {
   return (
     <>
-      <Main>
-        <Header />
-        <Container>
+      {/* <Main> */}
+        {/* <Header /> */}
+        <Container name='portfolio'>
           <PortfolioContents>
-            {data.map((item) => {
+            {data.map((item,index) => {
               return (
-                <ProjectContainer>
+                <ProjectContainer key={index}>
                   <ImageContainer>
                     <Image src={item.img} alt={`${item.name}_screenshot`} />
                   </ImageContainer>
@@ -45,8 +45,8 @@ const Portfolio = () => {
             })}
           </PortfolioContents>
         </Container>
-        <Footer />
-      </Main>
+        {/* <Footer /> */}
+      {/* </Main> */}
     </>
   );
 }

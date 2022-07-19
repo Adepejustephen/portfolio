@@ -3,33 +3,37 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 export const Container = styled(motion.section)`
-width: 90%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-margin: auto;
-padding-top: 40px;
-min-height: 100vh;
-height: 100%;
-`
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* padding-top: 40px; */
+  min-height: 100vh;
+  height: 100%;
+  background-color: #2f62b5;
+  width: 100%;
+`;
 export const AboutContainer = styled(motion.div)`
   /* height: 90vh; */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   /* align-items: center; */
-  margin-bottom: 50px;
+  margin: auto;
+  /* margin-bottom: 50px; */
+  width: 90%;
 
   @media screen and (max-width: 800px) {
-   flex-direction: column;
-   /* align-items: center; */
+    flex-direction: column;
+    /* align-items: center; */
   }
 `;
 export const AboutLeft = styled(motion.div)`
 /* flex:1; */
 `
 export const AboutImageContainer = styled(motion.div)`
-  height: 500px;
-  max-width: 500px;
+  height: 400px;
+  max-width: 600px;
   width: 100%;
   position: relative;
   border-radius: 5px;
@@ -45,10 +49,10 @@ export const AboutImageContainer = styled(motion.div)`
     height: 400px;
   }
 
-  @media screen and (max-width: 800px) {
+  /* @media screen and (max-width: 800px) {
     max-width: 100%;
     margin-bottom: 30px;
-  }
+  } */
 
   &::after {
     content: "";
@@ -76,7 +80,7 @@ object-fit: cover;
 `
 export const AboutTextContainer = styled(motion.div)`
   margin-left: 30px;
-  width: 35%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -108,9 +112,14 @@ export const AboutTitle = styled(motion.h4)`
 `;
 export const AboutText = styled(motion.p)`
   align-self: flex-end;
+  color: #f7f7f7;
+  font-size: 1.3rem;
+  line-height: 3.2rem;
+  margin-bottom: 30px;
 
-  @media screen and (max-width: 800px) {
-    margin-bottom: 30px;
+  @media screen and (min-width: 600px) {
+    margin-bottom: 0;
+    font-size: 1.6rem;
   }
 `;
 export const AboutTextLink = styled(Link)`
@@ -119,7 +128,7 @@ export const AboutTextLink = styled(Link)`
 export const AboutTextLinkText = styled(motion.span)`
   /* align-self: flex-end; */
   border-bottom: 2px solid ${(props) => props.theme.logo};
-  font-size: 1.rem;
+  font-size: 1.4rem;
   padding-bottom: 3px;
   justify-self: flex-end;
   transition: 0.3s ease;
@@ -135,32 +144,3 @@ export const AboutTextLinkText = styled(motion.span)`
 `;
 
 
-export const Skills = styled(motion.section)`
-
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-bottom: 80px;
-
-
-
-`;
-
-export const SkllsList = styled(motion.ul)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media screen and (max-width: 800px) {
-   flex-wrap: wrap;
-  }
-`;
-export const SkllsListItem = styled(motion.li)`
-  padding-right: 20px;
-`;
-export const SkllsImage = styled(motion.img)`
-  line-height: 80px;
-  width: 80px;
-  /* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
-    brightness(118%) contrast(119%); */
-`;

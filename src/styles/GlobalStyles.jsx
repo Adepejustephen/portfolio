@@ -1,12 +1,12 @@
-import { createGlobalStyle } from 'styled-components'
-// itmport background from "../images/endless-constellation.svg";
+import styled, { createGlobalStyle } from "styled-components";
+// import BACKGROUND from "../assests/images/backgroud_pattern.svg";
 // import '../assests/fonts/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf'
-
 
 export const GlobalStyle = createGlobalStyle`
     
     html {
         box-sizing: border-box;
+        font-size: 62.75%;
     }
 
     *,*::before, *::after  {
@@ -18,6 +18,9 @@ export const GlobalStyle = createGlobalStyle`
     body{
         width: 100%;
        font-family: "Inter", sans-serif;
+       font-family: 'Roboto', sans-serif;
+/* font-family: 'Roboto Mono', monospace; */
+       min-height: 100vh;
        /* min-height: 100vh; */
        /* font-family: 'Monument Extended', sans-serif; */
        /* font-style: normal; */
@@ -27,7 +30,12 @@ export const GlobalStyle = createGlobalStyle`
         background-color: #022840;
         background-color: #212529;
         background-color: #0A192F; */
-        color: #fff;
+        
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: #000;
+        background-color: #FFFFFF;
         /* position: relative; */
         overflow-x: hidden;
     }
@@ -47,3 +55,5 @@ li {
     list-style: none;
 }
 `;
+
+export const Body = styled.body``;
