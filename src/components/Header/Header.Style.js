@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 
 export const Container = styled(motion.nav)`
   /* padding: 30px 0; */
-  min-height: ${(props) => (props.fix ? "80px" : "")};
+  height: ${(props) => (props.fix ? "80px" : "")};
   display: flex;
   align-items: center;
-  background-color: ${(props) => (props.fix ? "#fff" : "")};
+  background-color: ${(props) => (props.fix ? "#f5f5f5" : "")};
   position: ${(props) => (props.fix ? "fixed" : "absolute")};
   transition: ${(props) =>
-    props.fix ? " height 0.5s ease-in-out" : "0.5s ease-in-out"};
+    props.fix ? " heigh tbackground-color 0.5s ease-in-out" : "height background-color 0.5s ease-in-out"};
   z-index: 10;
   top: ${(props) => (props.fix ? "0" : "3rem")};
   left: 0;

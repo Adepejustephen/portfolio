@@ -2,22 +2,27 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion';
 import { Link } from "react-scroll";
 
-export const HeroContainer = styled(motion.div)`
-  width: 90%;
+export const Container = styled(motion.section)`
+  width: 100%;
   min-height: 100vh;
   height: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
+`;
+export const HeroContainer = styled(motion.div)`
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+
 `;
 
 export const HeroTextContainer = styled.div`
 width: 100%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+
 `;
 
 export const TopText = styled(motion.h1)`
@@ -61,8 +66,8 @@ export const ImageContainer = styled(motion.div)`
 position: absolute;
 bottom: -8rem;
 right: 0;
-height: 60%;
-width: 35%;
+height: 50%;
+width: 30%;
 display: none;
 
 &:hover{
