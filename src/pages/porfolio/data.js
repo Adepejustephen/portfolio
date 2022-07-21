@@ -5,7 +5,7 @@ import Menshoes from '../../assests/images/MENSHOESNG.png'
 export const data = [
   {
     tile: "Menshoesng",
-    desc: "Menshoesng is a fullstack ecommerce website built with Nextjs, MaterialUI, Css and MongoDb as database. This project is really dear to me because it represents my Nextjs learning process and it also exposed me to more technical aspects of the web(for example, Mongo db).",
+    desc: "Menshoesng is a fullstack ecommerce website built with Nextjs, React, few Material UI components, Css modules and MongoDb.",
     img: Menshoes,
     live: "https://menshoesng.vercel.app/",
     git: "",
@@ -19,7 +19,7 @@ export const data = [
   },
   {
     tile: "Shop9ja  Dashboard",
-    desc: "Getshoesng is a fullstack ecommerce website built with Nextjs, MaterialUI, Css and MongoDb as database. This project is really dear to me because it represents my Nextjs learning process and also exposed me to more technical aspects of the web(for example, Mongo db).",
+    desc: "Shop9ja is an admin dashboard buillt with Reactjs and Css ",
     img: Shop9ja,
     live: "https://shop9ja-dashboard.netlify.app/",
     git: "",

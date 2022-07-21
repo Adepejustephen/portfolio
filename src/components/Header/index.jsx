@@ -14,6 +14,7 @@ const Header = () => {
      }
    }
 
+
   window.addEventListener("scroll", fixNavBar);
   
   return (
@@ -26,7 +27,7 @@ const Header = () => {
         y: 0,
       }}
       transition={{
-        duration: 0.7,
+        duration: 0.5,
         ease: "easeInOut",
       }}
     >
@@ -36,7 +37,7 @@ const Header = () => {
           to="hero"
           spy={true}
           smooth={true}
-          offset={false}
+          offset={0}
           duration={500}
         >
           <LogoText>Ifeoluwa</LogoText>

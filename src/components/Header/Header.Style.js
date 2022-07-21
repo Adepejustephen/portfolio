@@ -11,7 +11,9 @@ export const Container = styled(motion.nav)`
   background-color: ${(props) => (props.fix ? "#f5f5f5" : "")};
   position: ${(props) => (props.fix ? "fixed" : "absolute")};
   transition: ${(props) =>
-    props.fix ? " heigh tbackground-color 0.5s ease-in-out" : "height background-color 0.5s ease-in-out"};
+    props.fix
+      ? " heigh tbackground-color 0.5s ease-in-out"
+      : "height background-color 0.5s ease-in-out"};
   z-index: 10;
   top: ${(props) => (props.fix ? "0" : "3rem")};
   left: 0;
@@ -70,8 +72,8 @@ export const NavList = styled(motion.ul)`
 export const NavListItem = styled(motion.li)`
   margin: 0 20px;
   transition: 0.3s ease;
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 700;
 
   &:hover {
     color: ${(props) => props.theme.logo};
@@ -87,7 +89,8 @@ export const NavListItem = styled(motion.li)`
   }
 `;
 export const ItemLink = styled(Link)`
-  font-size: 2rem;
+  font-size: 1.6rem;
+
 
   &.active {
     color: #2f62b5;

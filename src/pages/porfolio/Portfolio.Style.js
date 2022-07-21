@@ -3,11 +3,10 @@ import styled from "styled-components";
 
 
 export const Container = styled(motion.section)`
- 
   min-height: 100vh;
   height: 100%;
   padding-top: 8rem;
-  background-color: #547a87;
+  background-color: #2f62b5;
 `;
 
 export const ProjectContainer = styled(motion.div)`
@@ -35,6 +34,7 @@ export const ImageContainer = styled(motion.div)`
   height: 400px;
   width: 600px;
 
+
   @media screen and (max-width: 800px) {
     width: 100%;
     margin-bottom: 40px;
@@ -43,16 +43,17 @@ export const ImageContainer = styled(motion.div)`
   @media screen and (max-width: 600px) {
     width: 100%;
     height: 400px;
-   
   }
 `;
 export const Image = styled(motion.img)`
-height: 100%;
-width: 100%;
-object-fit: cover;
-object-position: top;
-
-`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  /* box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1); */
+  box-shadow: 7px -5px 24px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+`;
 
 export const TextContainer = styled(motion.div)`
   width: 35%;
@@ -71,13 +72,18 @@ export const TextTitle = styled(motion.h2)`
   color: ${(props) => props.theme.logo};
   border-bottom: 1.5px solid ${(props) => `rgba(${props.theme.textRgba}, .7)`};
   padding-bottom: 5px;
+  font-size: 2.4rem;
+  font-weight: 700;
 
   @media screen and (max-width: 800px) {
-   
+    font-size: 1.6rem;
     margin-bottom: 40px;
   }
 `;
 export const Text = styled(motion.p)`
+color: #f7f7f7;
+font-size: 1.6rem;
+line-height: 150%;
   @media screen and (max-width: 800px) {
     margin-bottom: 40px;
   }

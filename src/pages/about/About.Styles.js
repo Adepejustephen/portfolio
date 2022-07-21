@@ -1,13 +1,12 @@
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom';
-import styled from 'styled-components'
+import { motion } from "framer-motion";
+import { Link } from "react-scroll";
+import styled from "styled-components";
 
 export const Container = styled(motion.section)`
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
+
   padding-top: 40px;
   min-height: 100vh;
   height: 100%;
@@ -15,12 +14,10 @@ export const Container = styled(motion.section)`
   width: 100%;
 `;
 export const AboutContainer = styled(motion.div)`
-  /* height: 90vh; */
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+
   margin: auto;
-  /* margin-bottom: 50px; */
   width: 90%;
 
   @media screen and (max-width: 800px) {
@@ -29,8 +26,8 @@ export const AboutContainer = styled(motion.div)`
   }
 `;
 export const AboutLeft = styled(motion.div)`
-/* flex:1; */
-`
+  /* flex:1; */
+`;
 export const AboutImageContainer = styled(motion.div)`
   height: 400px;
   max-width: 600px;
@@ -74,10 +71,10 @@ export const AboutImageContainer = styled(motion.div)`
   }
 `;
 export const AboutImage = styled(motion.img)`
-height: 100%;
-width: 100%;
-object-fit: cover;
-`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+`;
 export const AboutTextContainer = styled(motion.div)`
   margin-left: 30px;
   width: 60%;
@@ -88,7 +85,7 @@ export const AboutTextContainer = styled(motion.div)`
 
   @media screen and (max-width: 800px) {
     width: 100%;
-    margin-left:0;
+    margin-left: 0;
     margin-top: 3rem;
     /* align-items: center; */
   }
@@ -98,6 +95,8 @@ export const AboutTitle = styled(motion.h4)`
   width: max-content;
   position: relative;
   margin-bottom: 50px;
+  font-size: 2.4rem;
+  font-weight: 700;
 
   &::after {
     content: "";
@@ -107,8 +106,6 @@ export const AboutTitle = styled(motion.h4)`
     position: absolute;
     bottom: -10px;
     left: 0;
-
-    
   }
 `;
 export const AboutText = styled(motion.p)`
@@ -123,9 +120,7 @@ export const AboutText = styled(motion.p)`
     font-size: 1.6rem;
   }
 `;
-export const AboutTextLink = styled(Link)`
-
-`
+export const AboutTextLink = styled(Link)``;
 export const AboutTextLinkText = styled(motion.span)`
   /* align-self: flex-end; */
   border-bottom: 2px solid ${(props) => props.theme.logo};
@@ -140,8 +135,4 @@ export const AboutTextLinkText = styled(motion.span)`
     transition: 0.3s ease;
     border-bottom: 2px solid ${(props) => props.theme.logo};
   }
-
-  
 `;
-
-

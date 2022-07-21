@@ -16,7 +16,14 @@ const Hero = () => {
         <ImageContainer>
           <img src={Image} alt="patter-svg" />
         </ImageContainer>
-        <HeroLink>
+        <HeroLink
+          activeClass="active"
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={false}
+          duration={500}
+        >
           <HeroLinkText>Learn more about me</HeroLinkText>
         </HeroLink>
       </HeroContainer>
