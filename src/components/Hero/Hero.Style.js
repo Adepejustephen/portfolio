@@ -26,22 +26,23 @@ width: 100%;
 `;
 
 export const TopText = styled(motion.h1)`
-color: #000000;
-font-size: 5.2rem;
-font-weight: 700;
+  color: #000000;
+  font-size: 5.2rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
 
-@media screen and (min-width: 600px) {
-  font-size: 8rem;
-}
-@media screen and (min-width: 900px) {
-  font-size: 12rem;
-}
-
-`
+  @media screen and (min-width: 600px) {
+    font-size: 8rem;
+  }
+  @media screen and (min-width: 900px) {
+    font-size: 12rem;
+  }
+`;
 export const NameBold = styled(motion.h1)`
   color: #2f62b5;
   font-size: 5.2rem;
   font-weight: 700;
+  font-family: "Roboto", sans-serif;
 
   @media screen and (min-width: 600px) {
     font-size: 8rem;
@@ -92,20 +93,35 @@ img{
 
 export const HeroLink = styled(Link)`
   padding-top: 2rem;
+
+ 
 `;
 
 export const HeroLinkText = styled(motion.span)`
   border-bottom: 2px solid ${(props) => props.theme.logo};
-  font-size: 2.4rem;
-  justify-self: flex-end;
+  font-size: 1.8rem;
   transition: 0.3s ease;
- 
 
   &:hover {
     color: ${(props) => props.theme.logo};
     transform: scale(1.1);
     transition: 0.3s ease;
     border-bottom: 2px solid ${(props) => props.theme.logo};
+  }
+
+  .icon {
+    font-size: 4rem!important;
+    color: #2f62b5;
+    animation: animateIcon 3s infinite;
+  }
+
+  @keyframes animateIcon {
+    0%{
+      transform: translateY(-10px);
+    }
+    100%{
+      transform: translateY(0);
+    }
   }
 `;
 

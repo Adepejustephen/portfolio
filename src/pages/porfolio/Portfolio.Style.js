@@ -12,6 +12,7 @@ export const Container = styled(motion.section)`
 export const ProjectContainer = styled(motion.div)`
   height: 100%;
   display: flex;
+  flex-direction: ${(props) => props.direction ? 'row-reverse' : 'row'};
   width: 90%;
   margin: auto;
   /* justify-content: center; */
@@ -32,7 +33,7 @@ justify-content: center; */
 `
 export const ImageContainer = styled(motion.div)`
   height: 400px;
-  width: 600px;
+  width: 50%;
 
 
   @media screen and (max-width: 800px) {
@@ -52,19 +53,24 @@ export const Image = styled(motion.img)`
   object-position: top;
   /* box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1); */
   box-shadow: 7px -5px 24px -3px rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
+  border-radius: 4px;
 `;
 
 export const TextContainer = styled(motion.div)`
-  width: 35%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 20px;
-
-  @media screen and (max-width: 800px) {
+  margin-left: ${(props) => (props.direction ? "" : "2rem")};
+  margin-right: ${(props) => (props.direction ? "2rem" : "")};
+  align-items: ${(props) => (props.direction ? "" : "flex-end")} ;
+  text-align: ${(props) => (props.direction ? "" : "right")} ;
+  
+  @media screen and
+    (max-width: 800px) {
     width: 100%;
     margin-left: 0;
+    margin-right: 0;
   }
 `;
 export const TextTitle = styled(motion.h2)`
@@ -72,8 +78,12 @@ export const TextTitle = styled(motion.h2)`
   color: ${(props) => props.theme.logo};
   border-bottom: 1.5px solid ${(props) => `rgba(${props.theme.textRgba}, .7)`};
   padding-bottom: 5px;
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   font-weight: 700;
+  display: flex;
+
+  /* align-self: ${(props) => (props.direction ? "" : "flex-end")}; */
+  /* text-align:  ${(props) => (props.direction ? "right" : "right")}; */
 
   @media screen and (max-width: 800px) {
     font-size: 1.6rem;

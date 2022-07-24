@@ -14,12 +14,15 @@ const Portfolio = () => {
           <PortfolioContents>
             {data.map((item,index) => {
               return (
-                <ProjectContainer key={index}>
+                <ProjectContainer key={index} direction={item.direction}>
                   <ImageContainer>
                     <Image src={item.img} alt={`${item.name}_screenshot`} />
                   </ImageContainer>
-                  <TextContainer>
-                    <TextTitle> {item.tile}</TextTitle>
+                  <TextContainer direction={item.direction}>
+                    <TextTitle direction={item.direction}>
+                      {" "}
+                      {item.tile}
+                    </TextTitle>
                     <Text>{item.desc}</Text>
                     <Buttons>
                       <Btn>

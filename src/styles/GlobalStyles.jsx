@@ -17,9 +17,9 @@ export const GlobalStyle = createGlobalStyle`
 
     body{
         width: 100%;
-       font-family: "Inter", sans-serif;
-       font-family: 'Roboto', sans-serif;
-/* font-family: 'Roboto Mono', monospace; */
+       /* font-family: "Inter", sans-serif; */
+       /* font-family: 'Roboto', sans-serif; */
+font-family: 'Roboto Mono', monospace;
        min-height: 100vh;
         color: #000;
         background-color: #f5f5f5;

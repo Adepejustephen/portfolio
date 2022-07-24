@@ -1,5 +1,6 @@
 import { Container, HeroContainer, HeroLink, HeroLinkText, HeroTextContainer, ImageContainer, Intro, NameBold, TopText } from "./Hero.Style"
 import Image from '../../assests/svg/Thur.svg'
+import { UilArrowDown } from "@iconscout/react-unicons";
 
 const Hero = () => {
   return (
@@ -24,7 +25,9 @@ const Hero = () => {
           offset={false}
           duration={500}
         >
-          <HeroLinkText>Learn more about me</HeroLinkText>
+          <HeroLinkText>
+            Learn more about me <UilArrowDown className='icon'/>{" "}
+          </HeroLinkText>
         </HeroLink>
       </HeroContainer>
     </Container>
