@@ -4,21 +4,16 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Container = styled(motion.nav)`
-  /* padding: 30px 0; */
-  height: ${(props) => (props.fix ? "80px" : "")};
+ 
+  height: 80px;
   display: flex;
   align-items: center;
-  background-color: ${(props) => (props.fix ? "#f5f5f5" : "")};
-  position: ${(props) => (props.fix ? "fixed" : "absolute")};
-  transition: ${(props) =>
-    props.fix
-      ? " heigh tbackground-color 0.5s ease-in-out"
-      : "height background-color 0.5s ease-in-out"};
+  background-color: #f5f5f5;
+  position: sticky;
   z-index: 10;
-  top: ${(props) => (props.fix ? "0" : "3rem")};
+  top: 0;
   left: 0;
   right: 0;
-  /* position: relative; */
 `;
 
 export const HeaderContainer = styled(motion.div)`

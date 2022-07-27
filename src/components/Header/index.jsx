@@ -1,25 +1,15 @@
 import React from 'react'
 import { Container, HeaderContainer, ItemLink, Logo, LogoText, NavList, NavListItem, NavMenu } from './Header.Style'
 
-import { useState } from 'react';
+
 
 const Header = () => {
- const [fix, setfix] = useState('');
-
-   function fixNavBar() {
-     if (window.scrollY >= 100) {
-       setfix(true);
-     } else {
-       setfix(false);
-     }
-   }
 
 
-  window.addEventListener("scroll", fixNavBar);
   
   return (
     <Container
-      fix={fix}
+      
       initial={{
         y: "-100vh",
       }}
