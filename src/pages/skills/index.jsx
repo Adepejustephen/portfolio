@@ -1,4 +1,4 @@
-import { Container, Skills, SkllsImage, SkllsList, SkllsListItem } from './Skills.style'
+import { Container, Skills, SkllsImage, SkllsList, SkllsListItem, SubTitle, Title } from './Skills.style'
 import NextJs from "../../assests/images/nextdotjs.svg";
 import Javascript from "../../assests/images/javascript.svg";
 import React from "../../assests/images/react.svg";
@@ -6,14 +6,16 @@ import Git from "../../assests/images/git.svg";
 import Css from "../../assests/images/css3.svg";
 import StyledComponents from "../../assests/images/styledcomponents.svg";
 import Sass from "../../assests/images/sass.svg";
-// import Framer from "../../assests/images/framer.svg";
-// import Mongo from "../../assests/images/mongodb.svg";
+import Mongo from "../../assests/images/mongodb.svg";
 import Html from "../../assests/images/html5.svg";
+import TypeScript from "../../assests/images/typescript.svg";
+import Node from "../../assests/images/nodedotjs.svg";
+
 const SkillsSection = () => {
   return (
     <Container>
       <Skills>
-        {/* <AboutTitle style={{ textAlign: "center" }}>Skills</AboutTitle> */}
+        <Title>Skills</Title>
         <SkllsList>
           <SkllsListItem>
             <SkllsImage src={NextJs} alt="nextjs" />
@@ -51,20 +53,22 @@ const SkillsSection = () => {
             <SkllsImage src={Html} alt="Html5" style={{ color: "#fff" }} />
             <p>Html</p>
           </SkllsListItem>
-          {/* <SkllsListItem>
-                <SkllsImage
-                  src={Framer}
-                  alt="framer"
-                  style={{ color: "#fff" }}
-                />
-              </SkllsListItem>
-              <SkllsListItem>
-                <SkllsImage
-                  src={Mongo}
-                  alt="mongodb"
-                  style={{ color: "#fff" }}
-                />
-              </SkllsListItem> */}
+        </SkllsList>
+        <SubTitle>Learning</SubTitle>
+        <SkllsList>
+          <SkllsListItem>
+            <SkllsImage src={TypeScript} alt="Html5" />
+            <p>Typescript</p>
+          </SkllsListItem>
+
+          <SkllsListItem>
+            <SkllsImage src={Mongo} alt="mongodb" />
+            <p>MongoDb</p>
+          </SkllsListItem>
+          <SkllsListItem>
+            <SkllsImage src={Node} alt="node" />
+            <p>NodeJs</p>
+          </SkllsListItem>
         </SkllsList>
       </Skills>
     </Container>

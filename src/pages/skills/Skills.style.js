@@ -18,6 +18,25 @@ export const Skills = styled(motion.section)`
   height: 100%;
 `;
 
+export const Title = styled(motion.h4)`
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #2f62b5;
+  border-bottom: 2px solid #ffb357;
+  width: max-content;
+  padding-bottom: 0.6rem;
+`;
+
+export const SubTitle = styled(motion.h4)`
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  color: #2f62b5;
+  border-bottom: 2px solid #ffb357;
+`;
+
 export const SkllsList = styled(motion.ul)`
   display: flex;
   align-items: center;

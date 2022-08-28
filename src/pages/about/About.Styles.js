@@ -115,12 +115,18 @@ export const AboutText = styled(motion.p)`
   line-height: 3.2rem;
   margin-bottom: 30px;
 
+  span {
+    color: #ffb357;
+  }
+
   @media screen and (min-width: 600px) {
     margin-bottom: 0;
     font-size: 1.6rem;
   }
 `;
-export const AboutTextLink = styled(Link)``;
+export const AboutTextLink = styled(Link)`
+  margin-top: 2rem;
+`;
 export const AboutTextLinkText = styled(motion.span)`
   /* align-self: flex-end; */
   border-bottom: 2px solid ${(props) => props.theme.logo};

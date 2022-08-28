@@ -38,12 +38,14 @@ const About = () => {
               Web App accessible to all people. I enjoy being challenged and
               engaged with projects that requires me to work outside my comfort
               and skill set, as continuing to learn new languages and
-              development techniques are important to me. I build Web pages with
-              HTML5, CSS3, JAVASCRIPT and SASS. I'm currently learning React js.
-              I am enthusiastic about joining an organization that builds
-              products that is aimed at solving the world's problem as well a
-              friendly working environment. I'm a team player who is open-minded
-              to new technologies and ideas.
+              development techniques are important to me. I build Web pages with {""}
+              <span>HTML5</span>, <span>CSS3</span>,<span> JAVASCRIPT</span>,
+              <span>SASS</span>, <span> REACT</span> and <span> NEXT JS</span>.
+              I'm currently learning <span>Typescript</span>, <span>Node </span>
+              and <span> Express Js</span>. I am enthusiastic about joining an
+              organization that builds products that is aimed at solving the
+              world's problem as well a friendly working environment. I'm a team
+              player who is open-minded to new technologies and ideas.
             </AboutText>
 
             <AboutTextLink
