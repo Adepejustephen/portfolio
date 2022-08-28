@@ -1,6 +1,8 @@
 import NetFlix from '../../assests/images/Ifeoluwa-Netflix-clone.png'
 import Shop9ja from '../../assests/images/shop9ja.png'
 import Menshoes from '../../assests/images/MENSHOESNG.png'
+import SaveSpace from '../../assests/images/save-space.png'
+import Cart from '../../assests/images/Cart.png'
 
 export const data = [
   {
@@ -8,15 +10,31 @@ export const data = [
     desc: "Menshoesng is a fullstack ecommerce website built with Nextjs, React, few Material UI components, Css modules and MongoDb.",
     img: Menshoes,
     live: "https://menshoesng.vercel.app/",
-    git: "",
+    git: "https://github.com/Adepejustephen/menshoesng-nextjs",
     direction: true,
   },
   {
     tile: "NetFlix Clone",
-    desc: "This website is built with ReactJs, Styled components , Firebase authetication and Youtube-react. It allows autheticated users stream movie trailers when selected ",
+    desc: "This website was built with ReactJs, Styled components , Firebase authetication and Youtube-react. It allows autheticated users stream movie trailers when selected ",
     img: NetFlix,
     live: "https://netflixclone-ife.netlify.app",
-    git: "",
+    git: "https://github.com/Adepejustephen/Netflix-clone-with-reactJs",
+    direction: false,
+  },
+  {
+    tile: "Save-space landing page ",
+    desc: "Save-space landing page design implemented with ReactJs and Css ",
+    img: SaveSpace,
+    live: "https://save-space-designweb.netlify.app/",
+    git: "https://github.com/Adepejustephen/savespace-landing-page",
+    direction: true,
+  },
+  {
+    tile: "Shopping Cart ",
+    desc: "This website was built with React and Typescript ",
+    img: Cart,
+    live: "https://typsciptshopcart.netlify.app/",
+    git: "https://github.com/Adepejustephen/typescript-shopping-cart",
     direction: false,
   },
   {
@@ -24,7 +42,7 @@ export const data = [
     desc: "Shop9ja is an admin dashboard buillt with Reactjs and Css ",
     img: Shop9ja,
     live: "https://shop9ja-dashboard.netlify.app/",
-    git: "",
+    git: "https://github.com/Adepejustephen/Admin-dashboard-react",
     direction: true,
   },
   // {
