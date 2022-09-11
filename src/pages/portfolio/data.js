@@ -3,6 +3,7 @@ import Shop9ja from '../../assests/images/shop9ja.png'
 import Menshoes from '../../assests/images/MENSHOESNG.png'
 import SaveSpace from '../../assests/images/save-space.png'
 import Cart from '../../assests/images/Cart.png'
+import Crappo from '../../assests/images/crappo-small.png'
 
 export const data = [
   {
@@ -36,6 +37,14 @@ export const data = [
     live: "https://typsciptshopcart.netlify.app/",
     git: "https://github.com/Adepejustephen/typescript-shopping-cart",
     direction: false,
+  },
+  {
+    tile: "Crappo landing page",
+    desc: "Crappo is a crypto landing page website design implemented with React, Typescript, Styled-components and Framer-motion ",
+    img: Crappo,
+    live: "https://crappo-landing-page-vert.vercel.app",
+    git: "https://github.com/Adepejustephen/Crappo-landing-page",
+    direction: true,
   },
   {
     tile: "Shop9ja  Dashboard",

@@ -50,7 +50,7 @@ export const Image = styled(motion.img)`
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: top center;
   /* box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1); */
   box-shadow: 7px -5px 24px -3px rgba(0, 0, 0, 0.1);
   border-radius: 4px;

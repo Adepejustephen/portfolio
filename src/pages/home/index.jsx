@@ -2,7 +2,7 @@ import React from 'react'
 import { Footer, Header, Hero } from '../../components'
 // import Main from '../../styles/MainAnimate'
 import About from '../about';
-import Portfolio from '../porfolio';
+import Portfolio from '../portfolio';
 import SkillsSection from '../skills';
 
 
