@@ -1,4 +1,4 @@
-import { Container, HeroContainer, HeroLink, HeroLinkText, HeroTextContainer, ImageContainer, Intro, NameBold, TopText } from "./Hero.Style"
+import { Container, HeroContainer, HeroLink, HeroLinkText, HeroTextContainer,  Intro, NameBold, TopText } from "./Hero.Style"
 
 import { UilArrowDown } from "@iconscout/react-unicons";
 
