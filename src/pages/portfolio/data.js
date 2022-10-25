@@ -19,7 +19,7 @@ export const data = [
     desc: "This website was built with ReactJs, Styled components , Firebase authetication and Youtube-react. It allows autheticated users stream movie trailers when selected ",
     img: NetFlix,
     live: "https://netflixclone-ife.netlify.app",
-    git: "https://github.com/Adepejustephen/Netflix-clone-with-reactJs",
+    git: "https://netflixclone-ifeade.netlify.app/",
     direction: false,
   },
   {
