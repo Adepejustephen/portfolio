@@ -1,5 +1,5 @@
 import { Container, HeroContainer, HeroLink, HeroLinkText, HeroTextContainer, ImageContainer, Intro, NameBold, TopText } from "./Hero.Style"
-import Image from '../../assests/svg/Thur.svg'
+
 import { UilArrowDown } from "@iconscout/react-unicons";
 
 const Hero = () => {
@@ -14,9 +14,7 @@ const Hero = () => {
             for growth and experiences.
           </Intro>
         </HeroTextContainer>
-        <ImageContainer>
-          <img src={Image} alt="patter-svg" />
-        </ImageContainer>
+       >
         <HeroLink
           activeClass="active"
           to="about"
