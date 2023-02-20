@@ -7,7 +7,7 @@ const Header = () => {
       <div className="flex items-center justify-between m-auto max-w-6.5xl py-10 xxl:max-w-xbs">
         <div className="relative"></div>
 
-        <ul className="flex gap-4 items-center">
+        <ul className="md:flex gap-4 items-center hidden ">
           <li className="text-white">
             <Link to="">Home</Link>
           </li>
