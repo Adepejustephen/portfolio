@@ -4,15 +4,15 @@ import { Message, Phone } from '../assests/svg';
 
 const Contact = () => {
   return (
-    <section className="min-h-[80vh] h-full flex flex-col gap-10 m-auto max-w-6.5xl px-10 md:px-14 xl:px-0 py-10 md:gap-14 xxl:max-w-xbs ">
+    <section className="min-h-screen h-full flex flex-col justify-center gap-10 m-auto max-w-6.5xl px-10 md:px-14 xl:px-0 py-10 md:gap-14 xxl:max-w-xbs ">
       <div className="w-full bg-[#4ccff933] border border-[#FEFEFE] py-10 rounded-3xl">
         <div className=" flex flex-col  md:flex-row md:justify-between max-w-[900px] px-5 md:px-10 lg:px-0 m-auto ">
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-5">
               <h4 className="font-bold text-3xl md:text-5xl">Contact me </h4>
               <p className="text-sm md:text-base font-normal">
-                let&apos;s work together on your project as it relates to
-                freelance, remote or hybrid opportunities. your questions are
+                Let&apos;s work together on your project as it relates to
+                freelance, remote or hybrid opportunities. Your questions are
                 also welcome.
               </p>
             </div>
