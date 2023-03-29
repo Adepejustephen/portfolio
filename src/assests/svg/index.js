@@ -11,6 +11,8 @@ import { ReactComponent as Discord } from "./_Discord.svg"
 import { ReactComponent as Github } from "./Github.svg"
 import {ReactComponent as Linkedin } from "./Linkedin.svg"
 import { ReactComponent as Twitter } from "./_Twitter.svg"
+import { ReactComponent as Desktop } from "./_Github.svg"
+import { ReactComponent as GithubSm } from "./computer_24px.svg"
 
 
-export { Css, Git, JavaScript, ReactIcon, Sass, StyledComponents, NextJs, Message,Phone, Discord, Github, Twitter, Linkedin }
+export { Css, Git, JavaScript, ReactIcon, Sass, StyledComponents, NextJs, Message,Phone, Discord, Github, Twitter, Linkedin, Desktop, GithubSm }
