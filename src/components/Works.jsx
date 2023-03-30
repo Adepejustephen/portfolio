@@ -18,7 +18,7 @@ const Works = () => {
   
   return (
     <section
-      className="flex flex-col gap-10 w-full min-h-screen relative"
+      className="flex flex-col gap-10 w-full min-h-screen relative py-20"
       name="works"
     >
       <div className="flex flex-col max-w-6.5xl w-full px-10 md:px-14 xl:px-0 xxl:max-w-xbs m-auto gap-5 ">
@@ -29,13 +29,13 @@ const Works = () => {
 
         <div className="flex center mt-10 ">
           <button
-            className="absolute left-10 top-[60%] z-50 bg-white rounded-full border shadow-md p-2"
+            className="absolute left-3 lg:left-10 top-[60%] z-50 bg-white rounded-full border shadow-md p-2"
             onClick={() => swiperRef.current?.slidePrev()}
           >
             <GrFormPrevious className="text-gray-600 font-bold text-2xl" />
           </button>
           <button
-            className="absolute right-10 top-[60%] z-50 bg-white rounded-full border shadow-md p-2"
+            className="absolute right-3 lg:right-10 top-[60%] z-50 bg-white rounded-full border shadow-md p-2"
             onClick={() => swiperRef.current?.slideNext()}
           >
             <MdNavigateNext className="text-gray-600 font-bold text-2xl" />
@@ -52,14 +52,14 @@ const Works = () => {
                 slidesPerView: 3,
               },
               1024: {
-                slidesPerView: 2.8,
+                slidesPerView: 2.5,
               },
               640: {
-                slidesPerView: 2.5,
+                slidesPerView: 2,
                 // spaceBetween: 10,
               },
               320: {
-                slidesPerView: 1.5,
+                slidesPerView: 1,
                 // spaceBetween: 2-,
               },
             }}
@@ -69,7 +69,7 @@ const Works = () => {
             {projects.map((project, idx) => {
               return (
                 <SwiperSlide key={idx}>
-                  <div className="flex flex-col gap-3 w-full rounded-2xl shadow-md border-t-[10px] border-t-[#479FBB]  p-2 pt-0 bg-white bg-opacity-20 odd:border-t-[#CC9B0D] ">
+                  <div className={`flex flex-col gap-3 w-full rounded-2xl shadow-md border-t-[10px] ${project.border}  p-2 pt-0 bg-white bg-opacity-20  swipe-con`}>
                     <div className="h-[15rem] w-full relative">
                       <img
                         src={project.img}

@@ -63,4 +63,26 @@
     transition: 0.3s all;
    
   }
+.skill:nth-child(even) button {
+  border-color: #479FBB;
+ 
 }
+.skill:nth-child(odd) button {
+  border-color: red;
+ 
+}
+.swipe-con:nth-child(even) {
+  border-top-color: red;
+}
+/* .swiper-slide */
+}
+
+/* @layer utilities {
+  .swiper-wrapper .swiper-slide div {
+   background: yellow!important;
+  }
+  .odd-even tr:nth-child(even) {
+    @apply bg-blue-500;
+  }
+} */
+
