@@ -18,6 +18,7 @@ import {
   Html,
   GitLab,
   GitHub,
+  Vue,
 } from "./assests";
 
 export const skills = [
@@ -90,6 +91,11 @@ export const skills = [
     name: "Material Ui",
     icon: Material,
     color: "border-[#007FFF]",
+  },
+  {
+    name: "Vue",
+    icon: Vue,
+    color: "border-[#4FC08D]",
   },
 ];
 
