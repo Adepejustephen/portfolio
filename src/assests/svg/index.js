@@ -1,5 +1,5 @@
 import Html from "./html.svg"
-import Css from "./css.svg"
+import Css from "./Css.svg"
 import Git from "./Git.svg"
 import GitHub from "./git-hub.svg"
 import GitLab from "./gitlab.svg"
