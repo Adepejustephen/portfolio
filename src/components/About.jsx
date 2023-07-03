@@ -20,7 +20,7 @@ const About = () => {
             and development trends.
             <br /> <br />
             I have experience working with a variety of tools and frameworks,
-            such as React, NextJs, TypeScript, React-Query, Tailwind CSS, and
+            such as React, NextJs, TypeScript, Redux, React-Query, Tailwind CSS, and
             among others. Also, I can adapt to new technologies quickly.
             <br /> <br />I have a keen eye for design and can create visually
             appealing layouts that are both functional and aesthetically

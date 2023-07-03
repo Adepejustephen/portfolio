@@ -13,6 +13,7 @@ import Reactquery from "./react-query.svg"
 import Tailwind from "./tailwindcss.svg"
 import Typescript from "./typescript.svg"
 import Vue from "./vue.svg"
+import Redux from "./redux.svg"
 import { ReactComponent as Message} from "./message.svg"
 import { ReactComponent as Phone } from "./phone.svg"
 import { ReactComponent as Discord } from "./_Discord.svg"
@@ -39,6 +40,7 @@ export {
   Discord,
   Github,
   Twitter,
+  Redux,
   Linkedin,
   Desktop,
   GithubSm,

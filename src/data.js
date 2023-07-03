@@ -19,6 +19,7 @@ import {
   GitLab,
   GitHub,
   Vue,
+  Redux,
 } from "./assests";
 
 export const skills = [
@@ -41,6 +42,11 @@ export const skills = [
     name: "SCSS",
     icon: Sass,
     color: "border-[#CC6699]",
+  },
+  {
+    name: "Redux",
+    icon: Redux,
+    color: "border-[#764ABC]",
   },
   {
     name: "NextJs",
