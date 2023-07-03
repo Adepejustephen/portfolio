@@ -30,7 +30,7 @@ const Hero = () => {
             type="button"
             className="flex items-center justify-center w-full  p-2 text-orange rounded-lg hover:bg-[#1d1c1c333]  border hover:text-white border-orange md:w-[10.5rem] font-bold h-[3.8125rem]"
           >
-            <a href="https://bit.ly/3yRjWvN">View Cv</a>
+            <a href="IfeoluwaAdepeju.pdf">View Cv</a>
           </button>
         </div>
       </div>
