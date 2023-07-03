@@ -109,7 +109,7 @@ export const projects = [
   {
     title: "Certgo.app",
     link: "https://certgo.app/",
-    dsc: "",
+    dsc: "Certgo app is a certificate generator app built as an MVP with a cross-functional during HNGi9 training. It was built with React, CSS and Javascript",
     github: "",
     img: certgo,
     border: "border-t-[#CC9B0D]",
