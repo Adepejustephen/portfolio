@@ -33,7 +33,7 @@ const Header = () => {
           className="glass-panel rounded-full px-5 md:px-6 py-3 flex items-center justify-between w-full max-w-8xl gap-4 pointer-events-auto"
         >
           <div className="font-semibold tracking-tight text-white/90 text-sm md:text-base z-50 relative">
-            Ifeoluwa 
+            Ifeoluwa
           </div>
 
           <ul className="hidden md:flex items-center gap-8 text-sm text-white/60">
@@ -49,7 +49,7 @@ const Header = () => {
             ))}
           </ul>
 
-          <div className="flex items-center gap-3 z-50 relative">
+          <div className="flex items-center gap-3 z-[60] relative">
             <div className="hidden sm:flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
               <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)] animate-pulse"></div>
               <span className="text-[10px] text-white/70 uppercase tracking-widest font-mono">
@@ -60,7 +60,7 @@ const Header = () => {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-full bg-white/5 border border-white/10 relative z-50"
+              className="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-full bg-[#050505] border border-white/10 relative z-[60] pointer-events-auto cursor-pointer"
               aria-label="Toggle menu"
             >
               <motion.span
@@ -73,7 +73,7 @@ const Header = () => {
                 className="w-4 h-[1px] bg-white absolute block"
               />
               <motion.span
-                animate={isOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 3 }}
+                animate={isOpen ? { rotate: -45, y: 5} : { rotate: 0, y: 3 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="w-4 h-[1px] bg-white absolute block"
               />
@@ -106,7 +106,7 @@ const Header = () => {
                     duration: 0.4,
                     ease: [0.32, 0.72, 0, 1],
                   }}
-                  className="text-4xl font-bold tracking-tighter text-white/80 hover:text-white transition-colors"
+                  className="text-2xl md:text-4xl font-bold tracking-tighter text-white/80 hover:text-white transition-colors"
                 >
                   {link.name}
                 </motion.a>
