@@ -11,7 +11,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Open Sans", "sans-serif"],
+        sans: ["Satoshi", "sans-serif"],
+        display: ["Clash Display", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
       colors: {

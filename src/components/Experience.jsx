@@ -55,17 +55,17 @@ const Experience = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <section id="experience" className="w-full relative">
-      <div className="mb-16">
-        <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-white/40 mb-6 block">
-          Work Experience
-        </span>
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-white/80">
-          Teams I've Built With
+    <section id="experience" className="w-full pt-32">
+      <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter leading-none">
+          Experience
         </h2>
+        <span className="text-sm font-mono text-white/40 uppercase tracking-widest max-w-xs text-balance">
+          [02] Where I've engineered impact.
+        </span>
       </div>
 
-      <div className="flex flex-col w-full relative">
+      <div className="flex flex-col w-full border-t border-white/10">
         {experiences.map((exp, i) => (
           <motion.div
             key={exp.id}
@@ -75,81 +75,45 @@ const Experience = () => {
             transition={{
               duration: 0.6,
               delay: i * 0.1,
-              ease: [0.32, 0.72, 0, 1],
+              ease: [0.16, 1, 0.3, 1],
             }}
             onMouseEnter={() => setHoveredIndex(i)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className="relative w-full py-10 md:py-12 group cursor-pointer border-b border-white/5 last:border-0"
+            className="w-full py-12 md:py-16 group cursor-pointer border-b border-white/10 hover:bg-white/5 transition-colors duration-500 px-4 md:px-8 -mx-4 md:-mx-8 box-content"
           >
-            {/* Infinite Hover Background */}
-            <div
-              className={`absolute inset-y-0 left-1/2 -translate-x-1/2 w-[100vw] transition-colors duration-500 ease-out z-0 ${
-                hoveredIndex === i ? "bg-[#4C3DF2]" : "bg-transparent"
-              }`}
-            />
-
-            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-12 px-0">
-              <div className="flex items-start gap-4 md:gap-6 w-full md:w-auto flex-1">
-                <div
-                  className={`w-16 h-16 rounded-2xl flex-shrink-0 transition-colors duration-500 ease-out flex items-center justify-center ${
-                    hoveredIndex === i
-                      ? "bg-white text-[#4C3DF2]"
-                      : "bg-white/5 border border-white/10 text-white/20"
-                  }`}
-                >
-                  {/* Placeholder for company logo */}
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect x="2" y="2" width="9" height="9" rx="2" />
-                    <rect x="13" y="2" width="9" height="9" rx="2" />
-                    <rect x="2" y="13" width="9" height="9" rx="2" />
-                    <rect x="13" y="13" width="9" height="9" rx="2" />
-                  </svg>
-                </div>
-
-                <div className="flex flex-col">
-                  <h3
-                    className={`text-2xl font-bold tracking-tight transition-colors duration-500 ease-out ${
-                      hoveredIndex === i ? "text-white" : "text-white/80"
-                    }`}
-                  >
-                    {exp.company}
-                  </h3>
-                  <span
-                    className={`text-sm font-mono mt-2 mb-6 transition-colors duration-500 ease-out uppercase tracking-wider ${
-                      hoveredIndex === i ? "text-white/90" : "text-white/40"
-                    }`}
-                  >
-                    {exp.role}
-                  </span>
-
-                  <ul className="flex flex-col gap-3">
-                    {exp.desc.map((point, idx) => (
-                      <li
-                        key={idx}
-                        className={`text-sm md:text-base leading-relaxed transition-colors duration-500 ease-out max-w-3xl flex items-start gap-3 ${
-                          hoveredIndex === i ? "text-white/80" : "text-white/30"
-                        }`}
-                      >
-                        <span className="mt-2 w-1 h-1 rounded-full flex-shrink-0 bg-white/20"></span>
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-16">
+              {/* Left: Meta */}
+              <div className="w-full md:w-1/4 flex flex-row md:flex-col justify-between items-start gap-4">
+                <span className="font-mono text-xs text-white/40 uppercase tracking-widest group-hover:text-white transition-colors duration-300">
+                  {exp.date}
+                </span>
+                <span className="font-mono text-[10px] text-white/20 uppercase tracking-widest">
+                  ROLE_{exp.id.toString().padStart(2, "0")}
+                </span>
               </div>
 
-              <div
-                className={`font-mono text-sm whitespace-nowrap transition-colors duration-500 ease-out mt-2 md:mt-0 ${
-                  hoveredIndex === i ? "text-white" : "text-white/40"
-                }`}
-              >
-                {exp.date}
+              {/* Right: Content */}
+              <div className="w-full md:w-3/4 flex flex-col">
+                <h3 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 group-hover:translate-x-4 transition-transform duration-500">
+                  {exp.company}
+                </h3>
+
+                <span className="text-sm font-mono text-emerald-500 uppercase tracking-widest mb-8 group-hover:translate-x-4 transition-transform duration-500 delay-75">
+                  {exp.role}
+                </span>
+
+                <div className="grid grid-cols-1 gap-4 group-hover:translate-x-4 transition-transform duration-500 delay-100">
+                  {exp.desc.map((point, idx) => (
+                    <div key={idx} className="flex items-start gap-4">
+                      <span className="font-mono text-white/20 mt-1">
+                        {"->"}
+                      </span>
+                      <p className="text-sm md:text-base text-white/60 leading-relaxed font-mono max-w-2xl">
+                        {point}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>

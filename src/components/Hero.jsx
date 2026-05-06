@@ -1,49 +1,103 @@
-import React from "react";
+
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "@phosphor-icons/react";
+import { ArrowDownRight } from "@phosphor-icons/react";
 
 const Hero = () => {
   return (
-    <section className="pt-24 md:pt-40 flex flex-col items-start text-left w-full">
+    <section
+      id="hero"
+      className="w-full min-h-[100dvh] flex flex-col justify-between px-4 sm:px-8 py-8 md:py-12 relative overflow-hidden bg-[#050505]"
+    >
+      {/* Editorial Brutalist Typography Background Pattern */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] pointer-events-none opacity-[0.02] flex flex-col -gap-20 rotate-[-12deg] z-0 mix-blend-overlay">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <span
+            key={i}
+            className="text-[20vw] font-display font-black leading-none whitespace-nowrap select-none"
+          >
+            FRONTEND MOBILE ENGINEER
+          </span>
+        ))}
+      </div>
+
+      {/* Top Nav (Replaces standard header) */}
+      <div className="w-full flex justify-between items-start z-10">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="text-xs font-mono uppercase tracking-[0.2em] text-white/50"
+        >
+          Lagos, NGR <br />
+          (GMT+1)
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="flex items-center gap-3 bg-white/5 backdrop-blur-md px-4 py-2 border border-white/10 rounded-full"
+        >
+          <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.8)] animate-pulse" />
+          <span className="text-[10px] uppercase font-mono tracking-widest text-white/80">
+            Available
+          </span>
+        </motion.div>
+      </div>
+
+      {/* Center Massive Typography */}
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 100, damping: 20 }}
-        className="flex flex-col max-w-4xl"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        className="w-full flex flex-col items-center justify-center text-center z-10 py-20"
       >
-        <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-white/50 mb-12 flex items-center gap-4">
-          Frontend & Mobile Engineer{" "}
-          <span className="w-1 h-1 rounded-full bg-white/20"></span> Lagos,
-          Nigeria
-        </span>
-
-        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[1.05] mb-10 text-balance">
-          Ifeoluwa <br />
-          <span className="text-white/40">Adepeju.</span>
+        <h1 className="text-[15vw] sm:text-[12vw] font-display font-black uppercase leading-[0.8] tracking-tighter mix-blend-difference">
+          Ifeoluwa
         </h1>
+        <h1
+          className="text-[15vw] sm:text-[12vw] font-display font-black uppercase leading-[0.8] tracking-tighter text-transparent"
+          style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)" }}
+        >
+          Adepeju
+        </h1>
+      </motion.div>
 
-        <p className="text-lg md:text-xl text-white/60 leading-relaxed max-w-2xl mb-12">
-          Frontend & Mobile Engineer with 4+ years building production-grade web and mobile applications across fintech, SaaS, AI, and commerce platforms. Specialises in React and React Native — from architecting secure data layers to full App Store deployments.
-        </p>
+      {/* Bottom Info Bar */}
+      <div className="w-full flex flex-col md:flex-row justify-between items-end gap-8 z-10">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-md"
+        >
+          <p className="text-sm md:text-base text-white/50 leading-relaxed font-mono">
+            // FRONTEND & MOBILE ENGINEER
+            <br />
+            <br />
+            With 4+ years building production-grade web and mobile applications
+            across fintech, SaaS, AI, and commerce platforms. Specializing in
+            React & React Native architectures.
+          </p>
+        </motion.div>
 
-        <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        >
           <a
             href="#projects"
-            className="group flex items-center justify-center gap-4 bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:scale-[0.98] transition-transform duration-300 w-full sm:w-auto"
+            className="group flex items-center justify-center w-24 h-24 md:w-32 md:h-32 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white text-white hover:text-black transition-colors duration-500"
           >
-            See my work
-            <span className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-[1px] transition-transform duration-300">
-              <ArrowUpRight weight="bold" size={16} />
-            </span>
+            <ArrowDownRight
+              size={32}
+              weight="light"
+              className="group-hover:translate-y-1 group-hover:translate-x-1 transition-transform duration-300"
+            />
           </a>
-          <a
-            href="#contact"
-            className="px-6 py-3 sm:py-4 rounded-full font-medium text-white/60 hover:text-white transition-colors duration-300 w-full sm:w-auto text-center"
-          >
-            Get in touch
-          </a>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 };

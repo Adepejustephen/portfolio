@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "@phosphor-icons/react";
 import orbipay1 from "../assests/images/orbipay-screen-1.png";
@@ -35,100 +35,92 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="w-full">
-      <div className="mb-12">
-        <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-white/40">
-          Selected Works
+    <section id="projects" className="w-full pt-32">
+      <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter leading-none">
+          Selected <br /> Work
+        </h2>
+        <span className="text-sm font-mono text-white/40 uppercase tracking-widest max-w-xs text-balance">
+          [01] Featured production builds & architectural systems.
         </span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-8 md:gap-12">
         {projects.map((project, i) => (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{
-              duration: 0.7,
+              duration: 0.8,
               delay: i * 0.1,
-              ease: [0.32, 0.72, 0, 1],
+              ease: [0.16, 1, 0.3, 1],
             }}
             key={project.id}
-            className="glass-panel rounded-[2rem] overflow-hidden group flex flex-col cursor-pointer p-2"
+            className="w-full group cursor-pointer"
           >
-            <div className="glass-panel-inner p-4 rounded-[calc(2rem-0.5rem)] overflow-hidden flex flex-col h-full border border-white/5 transition-colors duration-500 group-hover:bg-[#0f0f0f]">
-              {/* Image Section */}
-              <div className="relative h-[400px] md:h-[500px] w-full bg-white/[0.03] flex items-center justify-center p-6 gap-4 overflow-hidden border-b border-white/5">
-                {project.images && project.images.length > 0 ? (
-                  project.images.map((img, idx) => (
-                    <div
-                      key={idx}
-                      className="relative  w-full rounded-2xl h-[500px] shadow-2xl transform group-hover:-translate-y-3 transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]"
-                      style={{ transitionDelay: `${idx * 100}ms` }}
-                    >
-                      <img
-                        src={img}
-                        alt={`${project.title} mockup ${idx + 1}`}
-                        className="object-contain w-full h-full"
-                      />
-                    </div>
-                  ))
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center opacity-20">
-                    <div className="w-full h-full border-2 border-dashed border-white/20 rounded-2xl" />
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center border-t border-white/10 pt-8 transition-colors duration-500 group-hover:border-white/40">
+              {/* Content Side (Left) */}
+              <div className="w-full lg:w-5/12 flex flex-col h-full justify-between">
+                <div className="flex justify-between items-start mb-8">
+                  <span className="text-[12px] font-mono text-white/40">
+                    {project.id} — {project.year}
+                  </span>
+                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300 transform group-hover:scale-110">
+                    <ArrowUpRight size={18} />
                   </div>
-                )}
-              </div>
-
-              {/* Content Section */}
-              <div className="p-8 md:p-10 flex flex-col flex-1">
-                <div className="flex justify-between items-center mb-8">
-                  <div className="flex items-center gap-4">
-                    <span className="text-[10px] font-mono text-white/40">
-                      {project.id}
-                    </span>
-                    <span className="text-[10px] font-mono text-white/20">
-                      —
-                    </span>
-                    <span className="text-[10px] font-mono text-white/40">
-                      {project.year}
-                    </span>
-                  </div>
-                  <ArrowUpRight
-                    size={20}
-                    className="text-white/40 group-hover:text-white transition-colors duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 transform"
-                  />
                 </div>
 
-                <h3 className="text-2xl font-bold mb-4 tracking-tight text-white/90 group-hover:text-white transition-colors">
-                  {project.title}
-                </h3>
+                <div>
+                  <h3 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tighter mb-6 group-hover:pl-4 transition-all duration-500">
+                    {project.title}
+                  </h3>
+                  <p className="text-white/60 leading-relaxed font-mono text-sm mb-12">
+                    {project.desc}
+                  </p>
+                </div>
 
-                <p className="text-white/50 leading-relaxed text-sm mb-10 flex-1">
-                  {project.desc}
-                </p>
-
-                <div className="flex flex-wrap gap-4 mt-auto">
+                <div className="flex flex-wrap gap-3">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[10px] uppercase tracking-wider font-mono text-white/40 group-hover:text-white/60 transition-colors"
+                      className="px-4 py-2 text-[10px] uppercase tracking-widest font-mono border border-white/20 rounded-full group-hover:border-white/40 transition-colors"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
+
+              {/* Image Side (Right) */}
+              <div className="w-full lg:w-7/12 relative h-[500px] md:h-[600px] bg-[#0a0a0a] rounded-sm overflow-hidden flex items-center justify-center p-8 group-hover:bg-[#111] transition-colors duration-500">
+                {project.images && project.images.length > 0 ? (
+                  <div className="relative w-full h-full flex items-center justify-center gap-4">
+                    {project.images.map((img, idx) => (
+                      <div
+                        key={idx}
+                        className={`relative w-[200px] h-[400px] rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
+                          ${idx === 0 ? "group-hover:-rotate-6 group-hover:-translate-x-4" : "group-hover:rotate-6 group-hover:translate-x-4 mt-12"}
+                        `}
+                      >
+                        <img
+                          src={img}
+                          alt={`${project.title} mockup ${idx + 1}`}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/20 to-transparent flex items-center justify-center font-display font-black text-8xl text-white/5 uppercase tracking-tighter">
+                    {project.title}
+                  </div>
+                )}
+              </div>
             </div>
           </motion.div>
         ))}
       </div>
-
-      {/* <div className="mt-16 flex justify-center">
-        <button className="px-8 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white rounded-md text-sm font-medium transition-colors duration-300">
-          See All
-        </button>
-      </div> */}
     </section>
   );
 };

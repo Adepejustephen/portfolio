@@ -1,79 +1,87 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "@phosphor-icons/react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="w-full pt-16 border-t border-white/5">
-      <div className="mb-20">
-        <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-white/40">
+    <section id="contact" className="w-full pt-32">
+      <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter leading-none">
           Contact
+        </h2>
+        <span className="text-sm font-mono text-white/40 uppercase tracking-widest max-w-xs text-balance">
+          [04] Let's build something.
         </span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 border-t border-white/10 pt-16">
         {/* Left: Text */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-8 leading-[1.1]">
-            Let's build <br />
-            <span className="text-white/40">something together.</span>
+          <h2 className="text-5xl md:text-6xl font-display font-black uppercase tracking-tighter mb-8 leading-[0.9]">
+            Ready to <br />
+            <span
+              className="text-transparent"
+              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.4)" }}
+            >
+              collaborate?
+            </span>
           </h2>
-          <p className="text-white/60 mb-16 max-w-md leading-relaxed">
-            Open for full-time roles, freelance contracts, and consulting. I
+          <p className="text-white/60 mb-16 max-w-md leading-relaxed font-mono text-sm">
+            // Open for full-time roles, freelance contracts, and consulting. I
             respond within 24 hours.
           </p>
 
-          <div className="flex flex-col gap-6 text-sm">
+          <div className="flex flex-col gap-6">
             <div className="flex items-center group">
-              <span className="w-28 text-white/30 font-mono text-[10px] uppercase tracking-widest">
+              <span className="w-32 text-emerald-500 font-mono text-xs uppercase tracking-widest">
                 Email
               </span>
               <a
                 href="mailto:adepejuifeoluwa97@gmail.com"
-                className="text-white/80 hover:text-white transition-colors group-hover:translate-x-1 duration-300"
+                className="text-xl md:text-2xl font-display font-bold uppercase tracking-tighter text-white/80 hover:text-white transition-colors group-hover:translate-x-2 duration-300"
               >
                 adepejuifeoluwa97@gmail.com
               </a>
             </div>
             <div className="flex items-center group">
-              <span className="w-28 text-white/30 font-mono text-[10px] uppercase tracking-widest">
+              <span className="w-32 text-emerald-500 font-mono text-xs uppercase tracking-widest">
                 Phone
               </span>
               <a
                 href="tel:+2348149735987"
-                className="text-white/80 hover:text-white transition-colors group-hover:translate-x-1 duration-300"
+                className="text-xl md:text-2xl font-display font-bold uppercase tracking-tighter text-white/80 hover:text-white transition-colors group-hover:translate-x-2 duration-300"
               >
                 +234 814 973 5987
               </a>
             </div>
             <div className="flex items-center group">
-              <span className="w-28 text-white/30 font-mono text-[10px] uppercase tracking-widest">
+              <span className="w-32 text-emerald-500 font-mono text-xs uppercase tracking-widest">
                 LinkedIn
               </span>
               <a
                 href="https://www.linkedin.com/in/adepejuifeoluwa/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-white/80 hover:text-white transition-colors group-hover:translate-x-1 duration-300"
+                className="text-xl md:text-2xl font-display font-bold uppercase tracking-tighter text-white/80 hover:text-white transition-colors group-hover:translate-x-2 duration-300"
               >
                 linkedin.com/in/adepejuifeoluwa
               </a>
             </div>
             <div className="flex items-center group">
-              <span className="w-28 text-white/30 font-mono text-[10px] uppercase tracking-widest">
+              <span className="w-32 text-emerald-500 font-mono text-xs uppercase tracking-widest">
                 Github
               </span>
               <a
                 href="https://github.com/Adepejustephen"
                 target="_blank"
                 rel="noreferrer"
-                className="text-white/80 hover:text-white transition-colors group-hover:translate-x-1 duration-300"
+                className="text-xl md:text-2xl font-display font-bold uppercase tracking-tighter text-white/80 hover:text-white transition-colors group-hover:translate-x-2 duration-300"
               >
                 github.com/Adepejustephen
               </a>
@@ -86,53 +94,56 @@ const Contact = () => {
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7, delay: 0.2, ease: [0.32, 0.72, 0, 1] }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-[#0a0a0a] p-8 md:p-12 border border-white/5"
         >
           <form
             className="flex flex-col gap-10"
             onSubmit={(e) => e.preventDefault()}
           >
-            <div className="flex flex-col gap-3 group">
-              <label className="text-[10px] text-white/30 uppercase tracking-[0.2em] font-mono ml-1 group-focus-within:text-white/60 transition-colors">
-                Name
+            <div className="flex flex-col gap-4 group">
+              <label className="text-xs text-white/40 uppercase tracking-widest font-mono group-focus-within:text-emerald-500 transition-colors">
+                // Name
               </label>
               <input
                 type="text"
-                placeholder="Your name"
-                className="w-full bg-transparent border-b border-white/10 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white/60 transition-colors rounded-none"
+                placeholder="John Doe"
+                className="bg-transparent border-b border-white/10 pb-4 text-xl md:text-2xl font-display font-bold tracking-tight text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors"
               />
             </div>
 
-            <div className="flex flex-col gap-3 group">
-              <label className="text-[10px] text-white/30 uppercase tracking-[0.2em] font-mono ml-1 group-focus-within:text-white/60 transition-colors">
-                Email
+            <div className="flex flex-col gap-4 group">
+              <label className="text-xs text-white/40 uppercase tracking-widest font-mono group-focus-within:text-emerald-500 transition-colors">
+                // Email
               </label>
               <input
                 type="email"
-                placeholder="you@domain.com"
-                className="w-full bg-transparent border-b border-white/10 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white/60 transition-colors rounded-none"
+                placeholder="john@example.com"
+                className="bg-transparent border-b border-white/10 pb-4 text-xl md:text-2xl font-display font-bold tracking-tight text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors"
               />
             </div>
 
-            <div className="flex flex-col gap-3 group">
-              <label className="text-[10px] text-white/30 uppercase tracking-[0.2em] font-mono ml-1 group-focus-within:text-white/60 transition-colors">
-                Message
+            <div className="flex flex-col gap-4 group">
+              <label className="text-xs text-white/40 uppercase tracking-widest font-mono group-focus-within:text-emerald-500 transition-colors">
+                // Message
               </label>
               <textarea
+                rows={4}
                 placeholder="Tell me about your project..."
-                rows="4"
-                className="w-full bg-transparent border-b border-white/10 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white/60 transition-colors resize-none rounded-none"
-              ></textarea>
+                className="bg-transparent border-b border-white/10 pb-4 text-xl md:text-2xl font-display font-bold tracking-tight text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors resize-none"
+              />
             </div>
 
             <button
               type="submit"
-              className="group mt-6 self-start flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full font-medium hover:scale-[0.98] transition-transform duration-300"
+              className="group mt-8 self-start flex items-center justify-between w-full bg-white text-black px-8 py-6 font-display font-black uppercase tracking-widest hover:bg-emerald-500 hover:text-white transition-colors duration-300"
             >
-              Send message
-              <span className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-[1px] transition-transform duration-300">
-                <ArrowUpRight weight="bold" size={16} />
-              </span>
+              Send Dispatch
+              <ArrowUpRight
+                weight="bold"
+                size={24}
+                className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-300"
+              />
             </button>
           </form>
         </motion.div>

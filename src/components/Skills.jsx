@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 
 const Skills = () => {
@@ -42,16 +42,19 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="w-full">
-      <div className="mb-16">
-        <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-white/40">
-          Skills
+    <section id="skills" className="w-full pt-32">
+      <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter leading-none">
+          Arsenal
+        </h2>
+        <span className="text-sm font-mono text-white/40 uppercase tracking-widest max-w-xs text-balance">
+          [03] The tools I use to build.
         </span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 border-t border-white/10 pt-16">
         {/* Progress Bars */}
-        <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-16">
+        <div className="flex flex-col gap-16">
           {skillCategories.map((category, i) => (
             <motion.div
               key={category.title}
@@ -61,24 +64,24 @@ const Skills = () => {
               transition={{
                 duration: 0.7,
                 delay: i * 0.1,
-                ease: [0.32, 0.72, 0, 1],
+                ease: [0.16, 1, 0.3, 1],
               }}
             >
-              <h4 className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/40 mb-8 border-b border-white/10 pb-4">
-                {category.title}
+              <h4 className="text-sm font-mono tracking-[0.2em] uppercase text-emerald-500 mb-10">
+                // {category.title}
               </h4>
               <div className="flex flex-col gap-8">
                 {category.skills.map((skill) => (
-                  <div key={skill.name} className="w-full">
+                  <div key={skill.name} className="w-full group">
                     <div className="flex justify-between items-center mb-3">
-                      <span className="text-sm text-white/80 font-medium tracking-tight">
+                      <span className="text-xl md:text-2xl font-display font-bold uppercase tracking-tighter text-white/80 group-hover:text-white transition-colors">
                         {skill.name}
                       </span>
-                      <span className="text-xs font-mono text-white/40">
-                        {skill.level}
+                      <span className="text-xs font-mono text-white/40 group-hover:text-emerald-500 transition-colors">
+                        {skill.level}%
                       </span>
                     </div>
-                    <div className="h-[2px] w-full bg-white/5 relative overflow-hidden">
+                    <div className="h-[1px] w-full bg-white/10 relative overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
@@ -86,9 +89,9 @@ const Skills = () => {
                         transition={{
                           duration: 1.5,
                           delay: 0.2 + i * 0.1,
-                          ease: [0.32, 0.72, 0, 1],
+                          ease: [0.16, 1, 0.3, 1],
                         }}
-                        className="absolute top-0 left-0 h-full bg-white/60"
+                        className="absolute top-0 left-0 h-full bg-white"
                       />
                     </div>
                   </div>
@@ -103,16 +106,17 @@ const Skills = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7, delay: 0.2, ease: [0.32, 0.72, 0, 1] }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-[#0a0a0a] p-8 md:p-12 border border-white/5"
         >
-          <h4 className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/40 mb-8 border-b border-white/10 pb-4">
-            Tools
+          <h4 className="text-sm font-mono tracking-[0.2em] uppercase text-white/40 mb-10">
+            // Tooling & Ecosystem
           </h4>
-          <div className="flex flex-wrap gap-2.5">
+          <div className="flex flex-wrap gap-3">
             {tools.map((tool) => (
               <span
                 key={tool}
-                className="px-4 py-2 text-[11px] font-mono tracking-wide rounded-full border border-white/10 text-white/50 bg-white/[0.02] hover:bg-white/[0.05] transition-colors"
+                className="px-4 py-3 text-[11px] md:text-xs font-mono tracking-widest uppercase border border-white/10 text-white/60 hover:text-black hover:bg-white hover:border-white transition-all duration-300 cursor-default"
               >
                 {tool}
               </span>
