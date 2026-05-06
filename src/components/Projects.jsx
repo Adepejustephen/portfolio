@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "@phosphor-icons/react";
 import orbipay1 from "../assests/images/orbipay-screen-1.png";
@@ -37,7 +36,7 @@ const Projects = () => {
   return (
     <section id="projects" className="w-full pt-32">
       <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
-        <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter leading-none">
+        <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight leading-none">
           Selected <br /> Work
         </h2>
         <span className="text-sm font-mono text-white/40 uppercase tracking-widest max-w-xs text-balance">
@@ -72,7 +71,7 @@ const Projects = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tighter mb-6 group-hover:pl-4 transition-all duration-500">
+                  <h3 className="text-3xl md:text-4xl font-display font-bold uppercase tracking-tight mb-6 group-hover:pl-4 transition-all duration-500">
                     {project.title}
                   </h3>
                   <p className="text-white/60 leading-relaxed font-mono text-sm mb-12">

@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const Skills = () => {
@@ -44,7 +43,7 @@ const Skills = () => {
   return (
     <section id="skills" className="w-full pt-32">
       <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
-        <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter leading-none">
+        <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight leading-none">
           Arsenal
         </h2>
         <span className="text-sm font-mono text-white/40 uppercase tracking-widest max-w-xs text-balance">
@@ -68,7 +67,7 @@ const Skills = () => {
               }}
             >
               <h4 className="text-sm font-mono tracking-[0.2em] uppercase text-emerald-500 mb-10">
-                // {category.title}
+                {"//"} {category.title}
               </h4>
               <div className="flex flex-col gap-8">
                 {category.skills.map((skill) => (
@@ -110,7 +109,7 @@ const Skills = () => {
           className="bg-[#0a0a0a] p-8 md:p-12 border border-white/5"
         >
           <h4 className="text-sm font-mono tracking-[0.2em] uppercase text-white/40 mb-10">
-            // Tooling & Ecosystem
+            {"// Tooling & Ecosystem"}
           </h4>
           <div className="flex flex-wrap gap-3">
             {tools.map((tool) => (

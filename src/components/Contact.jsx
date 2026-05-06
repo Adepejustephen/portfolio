@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "@phosphor-icons/react";
 
@@ -6,7 +5,7 @@ const Contact = () => {
   return (
     <section id="contact" className="w-full pt-32">
       <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
-        <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter leading-none">
+        <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight leading-none">
           Contact
         </h2>
         <span className="text-sm font-mono text-white/40 uppercase tracking-widest max-w-xs text-balance">
@@ -23,7 +22,7 @@ const Contact = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col"
         >
-          <h2 className="text-5xl md:text-6xl font-display font-black uppercase tracking-tighter mb-8 leading-[0.9]">
+          <h2 className="text-4xl md:text-5xl font-display font-bold uppercase tracking-tight mb-8 leading-[1]">
             Ready to <br />
             <span
               className="text-transparent"
@@ -33,8 +32,9 @@ const Contact = () => {
             </span>
           </h2>
           <p className="text-white/60 mb-16 max-w-md leading-relaxed font-mono text-sm">
-            // Open for full-time roles, freelance contracts, and consulting. I
-            respond within 24 hours.
+            {
+              "// Open for full-time roles, freelance contracts, and consulting. I respond within 24 hours."
+            }
           </p>
 
           <div className="flex flex-col gap-6">
@@ -103,7 +103,7 @@ const Contact = () => {
           >
             <div className="flex flex-col gap-4 group">
               <label className="text-xs text-white/40 uppercase tracking-widest font-mono group-focus-within:text-emerald-500 transition-colors">
-                // Name
+                {"// Name"}
               </label>
               <input
                 type="text"
@@ -114,7 +114,7 @@ const Contact = () => {
 
             <div className="flex flex-col gap-4 group">
               <label className="text-xs text-white/40 uppercase tracking-widest font-mono group-focus-within:text-emerald-500 transition-colors">
-                // Email
+                {"// Email"}
               </label>
               <input
                 type="email"
@@ -125,7 +125,7 @@ const Contact = () => {
 
             <div className="flex flex-col gap-4 group">
               <label className="text-xs text-white/40 uppercase tracking-widest font-mono group-focus-within:text-emerald-500 transition-colors">
-                // Message
+                {"// Message"}
               </label>
               <textarea
                 rows={4}

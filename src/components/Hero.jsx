@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowDownRight } from "@phosphor-icons/react";
 
@@ -72,7 +71,7 @@ const Hero = () => {
           className="max-w-md"
         >
           <p className="text-sm md:text-base text-white/50 leading-relaxed font-mono">
-            // FRONTEND & MOBILE ENGINEER
+            {"// FRONTEND & MOBILE ENGINEER"}
             <br />
             <br />
             With 4+ years building production-grade web and mobile applications

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 const experiences = [
@@ -52,12 +52,10 @@ const experiences = [
 ];
 
 const Experience = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
   return (
     <section id="experience" className="w-full pt-32">
       <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
-        <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter leading-none">
+        <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight leading-none">
           Experience
         </h2>
         <span className="text-sm font-mono text-white/40 uppercase tracking-widest max-w-xs text-balance">
@@ -77,8 +75,6 @@ const Experience = () => {
               delay: i * 0.1,
               ease: [0.16, 1, 0.3, 1],
             }}
-            onMouseEnter={() => setHoveredIndex(i)}
-            onMouseLeave={() => setHoveredIndex(null)}
             className="w-full py-12 md:py-16 group cursor-pointer border-b border-white/10 hover:bg-white/5 transition-colors duration-500 px-4 md:px-8 -mx-4 md:-mx-8 box-content"
           >
             <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-16">
@@ -94,7 +90,7 @@ const Experience = () => {
 
               {/* Right: Content */}
               <div className="w-full md:w-3/4 flex flex-col">
-                <h3 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter mb-4 group-hover:translate-x-4 transition-transform duration-500">
+                <h3 className="text-3xl md:text-4xl font-display font-bold uppercase tracking-tight mb-4 group-hover:translate-x-4 transition-transform duration-500">
                   {exp.company}
                 </h3>
 
