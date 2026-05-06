@@ -1,34 +1,31 @@
-import React from 'react'
-import { Discord, Github, Linkedin, Twitter } from '../assests/svg';
-
+import React from "react";
 
 const Footer = () => {
-    const date = new Date()
-    const year = date.getFullYear()
   return (
-    <footer className="flex flex-col w-full items-center mt-10 gap-10">
-      <div className="flex gap-4 justify-center">
-        <a href="https://github.com/Adepejustephen">
-          <Github />
-        </a>
-        <a href="https://www.linkedin.com/in/adepejuifeoluwa/">
-         
-          <Linkedin />
-        </a>
-        <a href="https://twitter.com/AdepejuStephen">
-          <Twitter />
-        </a>
-        <a href="https://discord.com/Adepejustephen#0087">
-          <Discord />
-        </a>
+    <footer className="w-full py-8 px-4 sm:px-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 mt-16 text-xs text-white/30">
+      <div className="font-mono tracking-[0.2em] uppercase text-[10px]">
+        Ifeoluwa Adepeju © {new Date().getFullYear()}
       </div>
-      <div className="w-full border-t py-10 ">
-        <p className="text-base md:text-xl flex gap-4 items-center justify-center">
-          &copy;Copyrights {year}. <span>Ifeoluwa Adepeju</span>
-        </p>
+      <div className="flex gap-8 font-mono uppercase tracking-widest text-[10px]">
+        <a
+          href="https://github.com/Adepejustephen"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-white transition-colors"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/adepejuifeoluwa/"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-white transition-colors"
+        >
+          LinkedIn
+        </a>
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

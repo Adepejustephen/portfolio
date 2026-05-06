@@ -1,27 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: 'class',
   theme: {
     screens: {
       sm: "640px",
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      xxl: "1600px",
     },
     extend: {
       fontFamily: {
-        outfit: ["Outfit", " sans-serif"],
+        sans: ["Open Sans", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
       },
       colors: {
-        dark: "#333333",
-        lightbl: "#4CCFF9",
-        orange: "#FFBE00",
+        background: "#050505",
+        surface: "#0a0a0a",
+        accent: "#10b981", // Emerald
       },
-      maxWidth: {
-        "6.5xl": "1200px",
-        "xbs": "1600px",
+      transitionTimingFunction: {
+        'spring': 'cubic-bezier(0.32,0.72,0,1)',
       },
+      letterSpacing: {
+        'tighter': '-0.04em',
+      }
     },
   },
   plugins: [],

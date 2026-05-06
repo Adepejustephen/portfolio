@@ -1,46 +1,49 @@
 import React from "react";
-import { HeroImage } from "../assests/images";
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "@phosphor-icons/react";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col w-full h-full lg:flex-row lg:justify-between lg:items-center m-auto max-w-6.5xl px-10 md:px-14 xl:px-0 py-10 md:gap-14 min-h-screen xxl:max-w-xbs">
-      <div className="flex flex-col gap-6 text-center lg:text-left">
-        <div>
-          <h1 className="font-bold text-4xl  md:text-5xl xl:text-7xl">HI,</h1>
-          <h1 className="font-bold text-4xl  md:text-5xl xl:text-7xl">
-            I&apos;m Ifeoluwa, a <span className="text-lightbl">Front-end</span>{" "}
-           
-            developer that brings creative ideas to life.
-          </h1>
-        </div>
-        <p className="font-medium mb-3">
-          I'm a front-end developer, but I also have a passion for design. I
-          love to come up with creative ideas that help my clients succeed. I'm
-          excited to help you develop a new website or app, whether it's for
-          your business or your personal purpose.
+    <section className="pt-24 md:pt-40 flex flex-col items-start text-left w-full">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", stiffness: 100, damping: 20 }}
+        className="flex flex-col max-w-4xl"
+      >
+        <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-white/50 mb-12 flex items-center gap-4">
+          Frontend & Mobile Engineer{" "}
+          <span className="w-1 h-1 rounded-full bg-white/20"></span> Lagos,
+          Nigeria
+        </span>
+
+        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[1.05] mb-10 text-balance">
+          Ifeoluwa <br />
+          <span className="text-white/40">Adepeju.</span>
+        </h1>
+
+        <p className="text-lg md:text-xl text-white/60 leading-relaxed max-w-2xl mb-12">
+          Frontend & Mobile Engineer with 4+ years building production-grade web and mobile applications across fintech, SaaS, AI, and commerce platforms. Specialises in React and React Native — from architecting secure data layers to full App Store deployments.
         </p>
-        <div className="flex gap-5 justify-center lg:justify-start w-full">
-          <button
-            type="button"
-            className="flex items-center justify-center w-full p-2 bg-orange text-white rounded-lg hover:bg-transparent hover:border-orange hover:text-orange hover:border md:w-[10.5rem] font-bold h-[3.8125rem] "
+
+        <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+          <a
+            href="#projects"
+            className="group flex items-center justify-center gap-4 bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:scale-[0.98] transition-transform duration-300 w-full sm:w-auto"
           >
-            <a href="mailto:adepejuifeoluwa97@gmail.com"> Hire me</a>
-          </button>
-          <button
-            type="button"
-            className="flex items-center justify-center w-full  p-2 text-orange rounded-lg hover:bg-[#1d1c1c333]  border hover:text-white border-orange md:w-[10.5rem] font-bold h-[3.8125rem]"
+            See my work
+            <span className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-[1px] transition-transform duration-300">
+              <ArrowUpRight weight="bold" size={16} />
+            </span>
+          </a>
+          <a
+            href="#contact"
+            className="px-6 py-3 sm:py-4 rounded-full font-medium text-white/60 hover:text-white transition-colors duration-300 w-full sm:w-auto text-center"
           >
-            <a href="IfeoluwaAdepeju.pdf">View Cv</a>
-          </button>
+            Get in touch
+          </a>
         </div>
-      </div>
-      <div className="hidden lg:flex relative w-full h-full">
-        <img
-          src={HeroImage}
-          alt="head-shot-hero"
-          className=" h-full w-full object-cover"
-        />
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "spec-receiving-code-review": {
+      "source": "zixun-github/aisdlc",
+      "sourceType": "github",
+      "computedHash": "9d5642bf1b4b7550522a349774534ed37b95640c6ccdfeba0efb8e7d86a053e5"
+    }
+  }
+}
