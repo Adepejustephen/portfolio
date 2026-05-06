@@ -64,16 +64,17 @@ const Header = () => {
               aria-label="Toggle menu"
             >
               <motion.span
-                animate={isOpen ? { rotate: 45, y: 4 } : { rotate: 0, y: -3 }}
+                animate={isOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: -4 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="w-4 h-[1px] bg-white absolute block"
               />
               <motion.span
                 animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+                transition={{ duration: 0.2 }}
                 className="w-4 h-[1px] bg-white absolute block"
               />
               <motion.span
-                animate={isOpen ? { rotate: -45, y: 5} : { rotate: 0, y: 3 }}
+                animate={isOpen ? { rotate: -45, y: 0 } : { rotate: 0, y: 4 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="w-4 h-[1px] bg-white absolute block"
               />
