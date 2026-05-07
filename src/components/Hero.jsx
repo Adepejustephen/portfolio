@@ -1,14 +1,24 @@
-import { motion } from "framer-motion";
+
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { ArrowDownRight } from "@phosphor-icons/react";
 
 const Hero = () => {
+  const { scrollY } = useViewportScroll();
+  const y1 = useTransform(scrollY, [0, 800], [0, 200]);
+  const y2 = useTransform(scrollY, [0, 800], [0, -150]);
+  const opacity = useTransform(scrollY, [0, 400], [1, 0]);
+  const scale = useTransform(scrollY, [0, 400], [1, 0.95]);
+
   return (
     <section
       id="hero"
       className="w-full min-h-[100dvh] flex flex-col justify-between px-4 sm:px-8 py-8 md:py-12 relative overflow-hidden bg-[#050505]"
     >
       {/* Editorial Brutalist Typography Background Pattern */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] pointer-events-none opacity-[0.02] flex flex-col -gap-20 rotate-[-12deg] z-0 mix-blend-overlay">
+      <motion.div
+        style={{ y: y2 }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] pointer-events-none opacity-[0.02] flex flex-col -gap-20 rotate-[-12deg] z-0 mix-blend-overlay"
+      >
         {Array.from({ length: 5 }).map((_, i) => (
           <span
             key={i}
@@ -17,7 +27,7 @@ const Hero = () => {
             FRONTEND MOBILE ENGINEER
           </span>
         ))}
-      </div>
+      </motion.div>
 
       {/* Top Nav (Replaces standard header) */}
       <div className="w-full flex justify-between items-start z-10">
@@ -46,10 +56,11 @@ const Hero = () => {
 
       {/* Center Massive Typography */}
       <motion.div
+        style={{ y: y1, opacity, scale }}
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-        className="w-full flex flex-col items-center justify-center text-center z-10 py-20"
+        className="w-full flex flex-col items-center justify-center text-center z-10 py-20 origin-bottom"
       >
         <h1 className="text-[15vw] sm:text-[12vw] font-display font-black uppercase leading-[0.8] tracking-tighter mix-blend-difference">
           Ifeoluwa
