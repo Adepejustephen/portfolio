@@ -89,63 +89,36 @@ const Contact = () => {
           </div>
         </motion.div>
 
-        {/* Right: Form */}
+        {/* Right: Calendly CTA */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-[#0a0a0a] p-8 md:p-12 border border-white/5"
+          className="bg-[#0a0a0a] p-8 md:p-12 border border-white/5 flex flex-col justify-center items-start"
         >
-          <form
-            className="flex flex-col gap-10"
-            onSubmit={(e) => e.preventDefault()}
+          <h3 className="text-2xl md:text-3xl font-display font-bold uppercase tracking-tight mb-6">
+            Skip the email. <br /> Let's talk directly.
+          </h3>
+          <p className="text-white/60 mb-10 leading-relaxed font-mono text-sm max-w-md">
+            {
+              "// Grab a 30-minute slot on my calendar to discuss your project, architecture, or potential roles."
+            }
+          </p>
+
+          <a
+            href="https://calendly.com/adepejuifeoluwa97"
+            target="_blank"
+            rel="noreferrer"
+            className="group flex items-center justify-between w-full bg-emerald-500 text-black px-8 py-6 font-display font-black uppercase tracking-widest hover:bg-white transition-colors duration-300"
           >
-            <div className="flex flex-col gap-4 group">
-              <label className="text-xs text-white/40 uppercase tracking-widest font-mono group-focus-within:text-emerald-500 transition-colors">
-                {"// Name"}
-              </label>
-              <input
-                type="text"
-                placeholder="John Doe"
-                className="bg-transparent border-b border-white/10 pb-4 text-xl md:text-2xl font-display font-bold tracking-tight text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors"
-              />
-            </div>
-
-            <div className="flex flex-col gap-4 group">
-              <label className="text-xs text-white/40 uppercase tracking-widest font-mono group-focus-within:text-emerald-500 transition-colors">
-                {"// Email"}
-              </label>
-              <input
-                type="email"
-                placeholder="john@example.com"
-                className="bg-transparent border-b border-white/10 pb-4 text-xl md:text-2xl font-display font-bold tracking-tight text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors"
-              />
-            </div>
-
-            <div className="flex flex-col gap-4 group">
-              <label className="text-xs text-white/40 uppercase tracking-widest font-mono group-focus-within:text-emerald-500 transition-colors">
-                {"// Message"}
-              </label>
-              <textarea
-                rows={4}
-                placeholder="Tell me about your project..."
-                className="bg-transparent border-b border-white/10 pb-4 text-xl md:text-2xl font-display font-bold tracking-tight text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors resize-none"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="group mt-8 self-start flex items-center justify-between w-full bg-white text-black px-8 py-6 font-display font-black uppercase tracking-widest hover:bg-emerald-500 hover:text-white transition-colors duration-300"
-            >
-              Send Dispatch
-              <ArrowUpRight
-                weight="bold"
-                size={24}
-                className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-300"
-              />
-            </button>
-          </form>
+            Book on Calendly
+            <ArrowUpRight
+              weight="bold"
+              size={24}
+              className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-300"
+            />
+          </a>
         </motion.div>
       </div>
     </section>

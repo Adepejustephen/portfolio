@@ -7,12 +7,12 @@ const experiences = [
     company: "OrbipayX",
     role: "Mobile Engineer",
     desc: [
-      "Built the entire OrbiPayX fintech mobile application from scratch — a cross-border money transfer platform supporting CAD–NGN and NGN–CAD currency corridors — using React Native, Expo, and TypeScript.",
+      "Engineered the OrbiPayX fintech mobile application — a cross-border money transfer platform supporting CAD–NGN and NGN–CAD currency corridors — using React Native, Expo, and TypeScript.",
       "Integrated AES-GCM encryption to secure all API payloads end-to-end, ensuring sensitive financial data is fully protected in transit and meeting fintech security standards.",
       "Architected a custom hooks library on top of TanStack React Query and Axios — covering mutation hooks (create, update, delete) and query hooks (GET) — with built-in payload encryption and decryption on every request and response.",
       "Owned full mobile architecture from project setup through feature delivery, working independently in a fast-moving remote fintech environment.",
     ],
-    date: "Nov 2025 - Present",
+    date: "Oct 2025 - May 2026",
   },
   {
     id: 2,

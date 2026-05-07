@@ -23,6 +23,14 @@ const Footer = () => {
         >
           LinkedIn
         </a>
+        <a
+          href="https://calendly.com/adepejuifeoluwa97"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-white transition-colors"
+        >
+          Calendly
+        </a>
       </div>
     </footer>
   );
