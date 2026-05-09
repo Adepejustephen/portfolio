@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const experiences = [
@@ -55,15 +54,15 @@ const Experience = () => {
   return (
     <section id="experience" className="w-full pt-32">
       <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
-        <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight leading-none">
+        <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight leading-none text-black dark:text-white">
           Experience
         </h2>
-        <span className="text-sm font-mono text-white/40 uppercase tracking-widest max-w-xs text-balance">
+        <span className="text-sm font-mono text-black/40 dark:text-white/40 uppercase tracking-widest max-w-xs text-balance">
           [02] Where I've engineered impact.
         </span>
       </div>
 
-      <div className="flex flex-col w-full border-t border-white/10">
+      <div className="flex flex-col w-full border-t border-black/10 dark:border-white/10">
         {experiences.map((exp, i) => (
           <motion.div
             key={exp.id}
@@ -75,36 +74,36 @@ const Experience = () => {
               delay: i * 0.1,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="w-full py-12 md:py-16 group cursor-pointer border-b border-white/10 hover:bg-white/5 transition-colors duration-500 px-4 md:px-8 -mx-4 md:-mx-8 box-content"
+            className="w-full py-12 md:py-16 group cursor-pointer border-b border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-500 px-4 md:px-8 -mx-4 md:-mx-8 box-content"
           >
             <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-16">
               {/* Left: Meta */}
               <div className="w-full md:w-1/4 flex flex-row md:flex-col justify-between items-start gap-4">
-                <span className="font-mono text-xs text-white/40 uppercase tracking-widest group-hover:text-white transition-colors duration-300">
+                <span className="font-mono text-xs text-black/40 dark:text-white/40 uppercase tracking-widest group-hover:text-black dark:group-hover:text-white transition-colors duration-300">
                   {exp.date}
                 </span>
-                <span className="font-mono text-[10px] text-white/20 uppercase tracking-widest">
+                <span className="font-mono text-[10px] text-black/20 dark:text-white/20 uppercase tracking-widest">
                   ROLE_{exp.id.toString().padStart(2, "0")}
                 </span>
               </div>
 
               {/* Right: Content */}
               <div className="w-full md:w-3/4 flex flex-col">
-                <h3 className="text-3xl md:text-4xl font-display font-bold uppercase tracking-tight mb-4 group-hover:translate-x-4 transition-transform duration-500">
+                <h3 className="text-3xl md:text-4xl font-display font-bold uppercase tracking-tight mb-4 group-hover:translate-x-4 transition-transform duration-500 text-black dark:text-white">
                   {exp.company}
                 </h3>
 
-                <span className="text-sm font-mono text-emerald-500 uppercase tracking-widest mb-8 group-hover:translate-x-4 transition-transform duration-500 delay-75">
+                <span className="text-sm font-mono text-emerald-600 dark:text-emerald-500 uppercase tracking-widest mb-8 group-hover:translate-x-4 transition-transform duration-500 delay-75">
                   {exp.role}
                 </span>
 
                 <div className="grid grid-cols-1 gap-4 group-hover:translate-x-4 transition-transform duration-500 delay-100">
                   {exp.desc.map((point, idx) => (
                     <div key={idx} className="flex items-start gap-4">
-                      <span className="font-mono text-white/20 mt-1">
+                      <span className="font-mono text-black/20 dark:text-white/20 mt-1">
                         {"->"}
                       </span>
-                      <p className="text-sm md:text-base text-white/60 leading-relaxed font-mono max-w-2xl">
+                      <p className="text-sm md:text-base text-black/60 dark:text-white/60 leading-relaxed font-mono max-w-2xl">
                         {point}
                       </p>
                     </div>
